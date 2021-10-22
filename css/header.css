@@ -1,0 +1,15 @@
+/* 親要素の判定無効にして子要素のを有効にすると親要素のhover判定が子要素のとこの分になる(らしい) */
+.nav-item{
+  pointer-events: none;
+}
+.nav-link {
+  pointer-events: auto;
+}
+
+/* 今いる場所に下線的なのを。 */
+li.active {
+  border-bottom: solid 2px rgba(255,255,255,.55);
+}
+li.active:hover{
+  border-color: rgba(255,255,255,.75);
+}
