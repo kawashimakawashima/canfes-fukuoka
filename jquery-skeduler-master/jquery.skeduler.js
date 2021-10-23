@@ -19,7 +19,7 @@
     taskPlaceholderCssClass: 'skeduler-task-placeholder',
     cellCssClass: 'skeduler-cell',
 
-    lineHeight: 30,      // height of one half-hour line in grid
+    lineHeight: 50,      // height of one half-hour line in grid
     borderWidth: 1,      // width of board of grid cell
 
     debug: false
