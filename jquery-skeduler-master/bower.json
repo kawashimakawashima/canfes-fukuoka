@@ -1,0 +1,29 @@
+{
+  "name": "jquery-skeduler",
+  "version": "0.1.1",
+  "description": "This is jQuery plugin which provider you simple scheduler with some items on OX and 24-hours timeline on OY.",
+  "main": [
+    "jquery.skeduler.js",
+    "jquery.skeduler.css"
+  ],
+  "authors": [
+    "Oleg Mishenkin"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "jQuery",
+    "skeduler",
+    "scheduler"
+  ],
+  "homepage": "",
+  "dependencies": {
+    "jquery": ">=2.2.4"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
