@@ -117,9 +117,10 @@
 
     for (var i = 0; i < args.args.length; i++) {
       var width = 194 / (args.args[i] || 1);
-
-      tasks[i].width = width;
-      tasks[i].left = (args.indexes[i] * width) || 4;
+      if ("undefined" != typeof(tasks[i])) {
+        tasks[i].width = width;
+        tasks[i].left = (args.indexes[i] * width) || 4;
+      }
     }
 
     tasks.forEach(function (task, index) {
@@ -179,7 +180,7 @@
 
     var gridColumnElement = div.clone();
 
-    for (var i = 0; i < 24; i++) {
+    for (var i = 13; i < 18; i++) {
       // Populate timeline
       div.clone()
         .text(toTimeString(i))

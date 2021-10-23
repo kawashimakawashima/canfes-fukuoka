@@ -14,6 +14,18 @@
   <!-- css -->
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../jquery-skeduler-master/jquery.skeduler.css" type="text/css">
+
+  <script src="../jquery-skeduler-master/jquery.skeduler.js"></script>
+  <script src="../js/schedule.js"></script>
+  <style>
+    .skeduler-container {
+      margin: 50px 0 0 100px;
+      width: 1400px;
+      height: 700px;
+      overflow: scroll;
+    }
+  </style>
 </head>
 <body>
   <!-- ヘッダー -->
@@ -48,6 +60,9 @@
 
   <div class="outFrame"> 
     <h3>タイムスケジュール</h3>
+    <body>
+      <div id="skeduler-container"></div>
+    </body>
   </div>
 </body>
 </html>
