@@ -22,11 +22,11 @@ function getSchedulesAndHeaderes(value) {
       break;
     case "sevenSmall":
       schedules = sevenSmallSchedules;
-      headeres = ["七階大教室"];
+      headeres = ["七階小教室"];
       break;
-    case "two":
+    case "second":
       schedules = twoSchedules;
-      headeres = ["七階大教室"];
+      headeres = ["二階"];
       break;
   }
   return schedules,headeres;
