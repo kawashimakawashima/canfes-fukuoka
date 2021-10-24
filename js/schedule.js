@@ -1,10 +1,12 @@
 import getSchedulesAndHeaderes from "./scheduleData.js";
 
+
 $(document).ready(function() {
   if(window.matchMedia("(max-width: 768px)").matches){
-    skeduleFromData(getSchedulesAndHeaderes("all"));
-  }else{ 
     skeduleFromData(getSchedulesAndHeaderes("sevenBig"));
+  }else{ 
+    skeduleFromData(getSchedulesAndHeaderes("all"));
+    $('#headerSelect').hide();
   }
   
   $("#headerSelect").change(function(){
@@ -13,13 +15,13 @@ $(document).ready(function() {
   });
 });
 
-function skeduleFromData(schedules,headeres){
+function skeduleFromData(data){
   $("#skeduler-container").skeduler({
-    headers: headeres,
-    tasks: schedules,
-    cardTemplate: '<div>${title}</div><div>${value}</div>',
+    headers: data[0],
+    tasks: data[1],
+    cardTemplate: '<div class="projectTitle">${title}</div><div>${value}</div>',
     onClick: function (e, t) {
-      window.location.href = "./projects/"+t["url"];
+      window.location.href = "./projects/demo-"+t["url"]+".html";
     }
   });
 }

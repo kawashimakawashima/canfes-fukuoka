@@ -1,11 +1,11 @@
 // socondとseven同居してるのあれだなぁ...
 const sevenBigSchedules = [
   {"startTime":0.5,  "duration":0.5,"column":0,"id":1,
-  "title":"こんなんだよ","url":"dayo","value":"ダンボールでハリボテを作ってラジコン化"},
-  {"startTime":0.75, "duration":1.5,"column":1,"id":2,
-  "title":"こんなんです","url":"desu","value":"ダンボールでハリボテを作ってラジコン化"},
+  "title":"こんなんだよ","url":"dayo","value":"へのへのがへのへのでへのへの"},
+  {"startTime":0.75, "duration":1.5,"column":0,"id":2,
+  "title":"こんなんです","url":"desu","value":"へのへのがへのへのでへのへの"},
   {"startTime":3,    "duration":1  ,"column":0,"id":3,
-  "title":"こんなんらしい","url":"rasii","value":"ダンボールでハリボテを作ってラジコン化"}
+  "title":"こんなんらしい","url":"rasii","value":"へのへのがへのへのでへのへの"}
 
 ]
 const sevenSmallSchedules = [
@@ -20,7 +20,7 @@ function getSchedulesAndHeaderes(value) {
   let headeres = [];
   switch(value){
     case "all":
-      schedules = $.merge(sevenBigSchedules, sevenSmallSchedules, twoSchedules);
+      schedules = $.merge(sevenBigSchedules, sevenSmallSchedules, secondSchedules);
       headeres = ["七階大教室", "七階小教室", "二階"];
       break;
     case "sevenBig":
@@ -36,7 +36,7 @@ function getSchedulesAndHeaderes(value) {
       headeres = ["二階"];
       break;
   }
-  return schedules,headeres;
+  return [headeres,schedules];
 }
 
 export default getSchedulesAndHeaderes;

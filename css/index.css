@@ -3,3 +3,12 @@
   margin: auto;
   margin-top: 20px;
 }
+
+
+/* 雑にだけどスマホ対応〜 */
+@media screen and (max-width: 768px) {
+  .outFrame {
+    width: 90%;
+    margin-top: 10px;
+  }
+}

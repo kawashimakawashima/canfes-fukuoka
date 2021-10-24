@@ -8,3 +8,20 @@
 #headerSelect{
   margin: 0 0 0 30px
 }
+
+/* 雑にだけどスマホ対応〜 */
+@media screen and (max-width: 768px) {
+  .skeduler-container {
+    margin: 0 0 0 20px;
+    width: 270px;
+    height: 560px;
+  }
+  
+  #headerSelect{
+    margin: 0 0 0 20px
+  }
+}
+
+.projectTitle{
+  font-weight: bold;
+}
