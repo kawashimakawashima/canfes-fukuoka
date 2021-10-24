@@ -13,10 +13,10 @@ $(document).ready(function() {
   });
 });
 
-function skeduleFromData(headeres, tasks){
+function skeduleFromData(schedules,headeres){
   $("#skeduler-container").skeduler({
     headers: headeres,
-    tasks: tasks,
+    tasks: schedules,
     cardTemplate: '<div>${title}</div><div>${value}</div>',
     onClick: function (e, t) {
       window.location.href = "./projects/"+t["url"];
