@@ -18,6 +18,8 @@ function skeduleFromData(headeres, tasks){
     headers: headeres,
     tasks: tasks,
     cardTemplate: '<div>${title}</div><div>${value}</div>',
-    onClick: function (e, t) { console.log(e, t); }
+    onClick: function (e, t) {
+      window.location.href = "./projects/"+t["url"];
+    }
   });
 }

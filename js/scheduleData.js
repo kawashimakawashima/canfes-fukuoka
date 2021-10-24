@@ -1,10 +1,17 @@
+// socondとseven同居してるのあれだなぁ...
 const sevenBigSchedules = [
-  {"startTime":0.5,"duration":2,"column":0,"id":47302,"title":"へのラジコン","value":"ダンボールでハリボテを作ってラジコン化"}
+  {"startTime":0.5,  "duration":0.5,"column":0,"id":00001,
+  "title":"こんなんだよ","url":"dayo","value":"ダンボールでハリボテを作ってラジコン化"},
+  {"startTime":0.75, "duration":1.5,"column":1,"id":00002,
+  "title":"こんなんです","url":"desu","value":"ダンボールでハリボテを作ってラジコン化"},
+  {"startTime":3,    "duration":1  ,"column":0,"id":00003,
+  "title":"こんなんらしい","url":"rasii","value":"ダンボールでハリボテを作ってラジコン化"}
+
 ]
 const sevenSmallSchedules = [
 
 ]
-const twoSchedules = [
+const secondSchedules = [
 
 ]
 
@@ -25,7 +32,7 @@ function getSchedulesAndHeaderes(value) {
       headeres = ["七階小教室"];
       break;
     case "second":
-      schedules = twoSchedules;
+      schedules = secondSchedules;
       headeres = ["二階"];
       break;
   }
