@@ -15,17 +15,10 @@
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../jquery-skeduler-master/jquery.skeduler.css" type="text/css">
+  <link rel="stylesheet" href="../css/schedule.css">
 
   <script src="../jquery-skeduler-master/jquery.skeduler.js"></script>
   <script src="../js/schedule.js"></script>
-  <style>
-    .skeduler-container {
-      margin: 50px 0 0 100px;
-      width: 1400px;
-      height: 600px;
-      overflow: scroll;
-    }
-  </style>
 </head>
 <body>
   <!-- ヘッダー -->
@@ -61,6 +54,11 @@
   <div class="outFrame"> 
     <h3>タイムスケジュール</h3>
     <body>
+      <select id="headerSelect">
+        <option value="sevenBig">七階大教室</option>
+        <option value="sevenSmall">七階小教室</option>
+        <option value="second">二階</option>
+        </select>
       <div id="skeduler-container"></div>
     </body>
   </div>

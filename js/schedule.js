@@ -1,11 +1,23 @@
-const tasks=[{"startTime":0.5,"duration":2,"column":0,"id":47302,"title":"へのラジコン","value":"ダンボールでハリボテを作ってラジコン化"}]
-
+import getSchedulesAndHeaderes from "./scheduleData.js";
 
 $(document).ready(function() {
+  if(window.matchMedia("(max-width: 768px)").matches){
+    skeduleFromData(getSchedulesAndHeaderes("all"));
+  }else{ 
+    skeduleFromData(getSchedulesAndHeaderes("sevenBig"));
+  }
+  
+  $("#headerSelect").change(function(){
+    const str = $(this).val();
+    skeduleFromData(getSchedulesAndHeaderes(str));
+  });
+});
+
+function skeduleFromData(headeres, tasks){
   $("#skeduler-container").skeduler({
-    headers: ["七階大教室", "七階小教室", "二階"],
+    headers: headeres,
     tasks: tasks,
     cardTemplate: '<div>${title}</div><div>${value}</div>',
     onClick: function (e, t) { console.log(e, t); }
   });
-});
+}
