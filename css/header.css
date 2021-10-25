@@ -7,9 +7,43 @@
 }
 
 /* 今いる場所に下線的なのを。 */
-li.active {
+.nav-item.active {
   border-bottom: solid 2px rgba(255,255,255,.55);
 }
-li.active:hover{
+.nav-item.active:hover {
   border-color: rgba(255,255,255,.75);
+}
+
+/* 親子関係による指定とhover時他要素変更はできたのだけれど組み合わせるとうまく行かない...数が増えてもいけるようにしたかったのだけれど、まぁいいか... */
+.hasDropDown div{
+  display: flex;
+}
+.dropDown {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  width: 150px;
+}
+.dropDownButton{
+  pointer-events: all;
+  color: rgba(255,255,255,.55);
+  background: none;
+  border: none;
+}
+.dropDownButton:focus{
+  outline: none;
+}
+.dropDown-item {
+  pointer-events: all;
+  background-color: rgba(0, 0, 0, .90);
+  height: 30px;
+}
+.dropDown-item a{
+  margin: auto;
+  margin-left: 6px;
+  text-decoration: none;
+  color: rgba(255,255,255,.55);
+}
+.dropDown-item:hover .dropDown-item{
+  background-color: rgba(255,255,255,.75);
 }
