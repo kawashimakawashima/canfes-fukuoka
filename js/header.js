@@ -1,13 +1,10 @@
 $(document).ready(function() {
-  $(".dropDown").hide();
-
-  console.log($(".dropDownButton"));
-  $(".dropDownButton").on('click', function() {
-    $(".dropDown").show();
-  });
-  $(document).on('click touchend', function(event) {
-    if (!$(event.target).closest('body').length) {
-      $(".dropDown").hide();
+  $(document).on('click',function(e){
+    console.log();
+    if($(e.target).hasClass("dropDownButton")){
+      $(".dropDown").show();
+    }else{
+      $('.dropDown').hide();
     }
   });
 })
