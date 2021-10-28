@@ -14,14 +14,17 @@ const sevenSmallSchedules = [
 const secondSchedules = [
 
 ]
+const onlineSchedules = [
+
+]
 
 function getSchedulesAndHeaderes(value) {
   let schedules = [];
   let headeres = [];
   switch(value){
     case "all":
-      schedules = $.merge(sevenBigSchedules, sevenSmallSchedules, secondSchedules);
-      headeres = ["七階大教室", "七階小教室", "二階"];
+      schedules = $.merge(sevenBigSchedules, sevenSmallSchedules, secondSchedules, onlineSchedules);
+      headeres = ["七階大教室", "七階小教室", "二階", "オンライン"];
       break;
     case "sevenBig":
       schedules = sevenBigSchedules;
@@ -34,6 +37,10 @@ function getSchedulesAndHeaderes(value) {
     case "second":
       schedules = secondSchedules;
       headeres = ["二階"];
+      break;
+    case "online":
+      schedules = onlineSchedules;
+      headeres = ["オンライン"];
       break;
   }
   return [headeres,schedules];
