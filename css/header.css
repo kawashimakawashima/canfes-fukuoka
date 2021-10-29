@@ -14,7 +14,7 @@
   border-color: rgba(255,255,255,.75);
 }
 
-/* 親子関係による指定とhover時他要素変更はできたのだけれど組み合わせるとうまく行かない...数が増えてもいけるようにしたかったのだけれど、まぁいいか... */
+/* ドロップダウン系 */
 .hasDropDown div{
   display: flex;
 }
@@ -29,6 +29,13 @@
   color: rgba(255,255,255,.55);
   background: none;
   border: none;
+  pointer-events: auto;
+}
+.nav-item.active:hover .dropDownButton{
+  color: rgba(255,255,255,.75);
+}
+.dropDownButton:hover .nav-item{
+  border-color: rgba(255,255,255,.75);
 }
 .dropDownButton:focus{
   outline: none;
