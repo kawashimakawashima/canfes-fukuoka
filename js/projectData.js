@@ -48,12 +48,82 @@ function getSchedulesFromPraces(value) {
 function getRandomProject(numb) {
   let result=[];
   let projects = $.merge(sevenBigSchedules, sevenSmallSchedules, secondSchedules, onlineSchedules);
-  for(let i = 0; i < numb; l++){
+  for(let i = 0; i < numb; i++){
     let projectNumb=Math.floor(Math.random() * projects.length);
-    result.push(projects.splice(projectNumb,1)); 
+    result.push(projects.splice(projectNumb,1)[0]); 
   }
   return result;
 }
 
-export {getSchedulesFromPraces, getRandomProject};
-// ローカルだとcorsだかなんだかが出てテストできないので、いじる場合はまるっとコピペしてexport・importをコメントアウトするとやりやすい。
+const Xday = "2021-12-05";
+
+function formatDate(dt) {
+  var y = dt.getFullYear();
+  var m = ('00' + (dt.getMonth()+1)).slice(-2);
+  var d = ('00' + dt.getDate()).slice(-2);
+  return (y + '-' + m + '-' + d);
+}
+
+function isHolding(date) {
+  let formatedDate = formatDate(date);
+  if(formatedDate==Xday){
+    let time = date.getHours()*60+date.getMinutes()
+    if(time >= 13*60+0 && time <= 18*60+0){
+      return true;
+    }
+  }
+
+  return false;
+}
+
+
+function getNowProjects(date) {
+  let result=[];
+  if(isHolding(date)){
+    let nowTime = date.getHours()*60+date.getMinutes();
+    for(let i = 0; i< sevenBigSchedules.length; i++){
+      if(nowTime < (13+sevenBigSchedules[i].startTime)*60){
+        break;
+      }else{
+        if((13+sevenBigSchedules[i].startTime+sevenBigSchedules[i].duration)*60 > nowTime){
+          result.push(sevenBigSchedules[i]);
+        }
+      }
+    }
+    for(let i = 0; i< sevenSmallSchedules.length; i++){
+      if(nowTime < (13+sevenSmallSchedules[i].startTime)*60){
+        break;
+      }else{
+        if((13+sevenSmallSchedules[i].startTime+sevenSmallSchedules[i].duration)*60 > nowTime){
+          result.push(sevenSmallSchedules[i]);
+        }
+      }
+    }
+    for(let i = 0; i< secondSchedules.length; i++){
+      if(nowTime < (13+secondSchedules[i].startTime)*60){
+        break;
+      }else{
+        if((13+secondSchedules[i].startTime+secondSchedules[i].duration)*60 > nowTime){
+          result.push(secondSchedules[i]);
+        }
+      }
+    }
+    for(let i = 0; i< onlineSchedules.length; i++){
+      if(nowTime < (13+onlineSchedules[i].startTime)*60){
+        break;
+      }else{
+        if((13+onlineSchedules[i].startTime+onlineSchedules[i].duration)*60 > nowTime){
+          result.push(onlineSchedules[i]);
+        }
+      }
+    }
+  }
+
+  return result;
+}
+
+export default null;
+
+export {getSchedulesFromPraces, getRandomProject, isHolding, getNowProjects};
+
+// ローカルだとcorsだかなんだかが出てテストできないので、いじる場合はまるっとjsにコピペしてexport・importをコメントアウト＆htmlの<script type=module>⇨<script>でやるといい感じ

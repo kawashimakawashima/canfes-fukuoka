@@ -19,7 +19,7 @@
   <!-- js -->
   <script src="../js/header.js"></script>
   <script src="../js/index.js"></script>
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js" type="module"></script>
 </head>
 <body>
   <!-- ヘッダー -->
@@ -86,9 +86,15 @@
       </div>
     </div>
 
-    <a href="./schedule.html">
-      <h3>スケジュール</h3>
-    </a>
+    <div id="scheduleLink">
+      <a href="./schedule.html">スケジュール</a>
+      <div id="nowList">
+        <a href="./schedule.html">もっと見る</a>
+      </div>
+      <h3>テスト用</h3>
+      <input type="date" id="testDate"><input type="time" id="testTime"><button id="testButton">実行</button>
+    </div>
+    
 
     <a href="./aboutCampas.html">
       <h3>キャンパス住所・注意事項</h3>

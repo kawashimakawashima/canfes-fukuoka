@@ -1,12 +1,17 @@
 .skeduler-container {
   margin: 10px 0 0 30px;
-  width: 1400px;
+  width: 866px;
   height: 600px;
   overflow: scroll;
 }
 
 #headerSelect{
   margin: 0 0 0 30px
+}
+#timeLine{
+  position : absolute;
+  border-bottom: solid 2px orange;
+  width: 803px;
 }
 
 /* 雑にだけどスマホ対応〜 */
