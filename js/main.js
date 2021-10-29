@@ -28,13 +28,13 @@ $(document).ready(function() {
     date.setHours(times[0]);
     date.setMinutes(times[1]);
     
-    const nowProjects = getNowProjects(date);
-    for(let i = 0; i < nowProjects.length; i++){
+    const newProjects = getNowProjects(date);
+    for(let i = 0; i < newProjects.length; i++){
       $("#nowList").append($(
         '<div class="nowProject"><a href="./projects/' + 
-        nowProjects[i].url +'.html">'+ nowProjects[i].title +
+        newProjects[i].url +'.html">'+ newProjects[i].title +
         '</a><img src="../images/projects/icons/' +
-        nowProjects[i].iconUrl+'.png"></img></div>'
+        newProjects[i].iconUrl+'.png"></img></div>'
       ));
     }
   });

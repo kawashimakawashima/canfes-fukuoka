@@ -1,3 +1,4 @@
+
 // socondとseven同居してるのあれだなぁ...
 const sevenBigSchedules = [
   {"startTime":0.5 , "duration":0.5, "column":0, "id":1,
@@ -47,7 +48,7 @@ function getSchedulesFromPraces(value) {
 }
 function getRandomProject(numb) {
   let result=[];
-  let projects = $.merge(sevenBigSchedules, sevenSmallSchedules, secondSchedules, onlineSchedules);
+  let projects = sevenBigSchedules.concat(sevenSmallSchedules, secondSchedules, onlineSchedules);
   for(let i = 0; i < numb; i++){
     let projectNumb=Math.floor(Math.random() * projects.length);
     result.push(projects.splice(projectNumb,1)[0]); 
@@ -81,7 +82,7 @@ function getNowProjects(date) {
   let result=[];
   if(isHolding(date)){
     let nowTime = date.getHours()*60+date.getMinutes();
-    for(let i = 0; i< sevenBigSchedules.length; i++){
+    for(let i = 0; i < sevenBigSchedules.length; i++){
       if(nowTime < (13+sevenBigSchedules[i].startTime)*60){
         break;
       }else{
@@ -121,7 +122,7 @@ function getNowProjects(date) {
 
   return result;
 }
-
+// 魂の
 export default null;
 
 export {getSchedulesFromPraces, getRandomProject, isHolding, getNowProjects};
