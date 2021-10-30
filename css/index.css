@@ -18,7 +18,8 @@ body {
 }
 
 /* 謎用のpoup関連 */
-.popup {
+#questionPopup {
+  text-align: center;
   display: none;
   height: 100%;
   width: 100%;
@@ -30,16 +31,43 @@ body {
   align-items: center;
   z-index: 5;
 }
-.popup.active{
+#questionPopup.active{
   display: flex;
 }
-
-.content{
-  background: #fff;
-  padding: 30px;
-  width: 50%;
+#questionPopup img{
+  width: 80%;
 }
 
+#qContent{
+  background: #fff;
+  padding: 5px;
+  width: 50%;
+}
+#qTitle{
+  font-weight: bold;
+  font-size: 30px;
+}
+#hintButton{
+  cursor: pointer;
+}
+#questionPopup.corrected #hintButton{
+  display: none;
+}
+#hint{
+  display: none;
+}
+#hint.active{
+  display: block;
+}
+#questionPopup.corrected #hint{
+  display: none;
+}
+#questionPopup.corrected #answerButton{
+  display: none;
+}
+#questionPopup.corrected #answerInput{
+  display: none;
+}
 /* 背景系〜 */
 #backGround{
   background-image: url("../images/backgroundImage.png");

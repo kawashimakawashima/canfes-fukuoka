@@ -58,17 +58,17 @@
   </nav>
 
   <!-- 謎用のpopup --> 
-  <div class="popup nazo-non">
-      <div class="content">
-          <p>へのへのーん</p>
-          <button class="close" value="nazo-non">閉じる</button>
+  <div id="questionPopup">
+      <div id="qContent">
+          <div id="qTitle"></div>
+          <img></img>
+          <input id="answerInput"></input><button id="answerButton">回答</button>
+          <div id="hintButton"></div>
+          <div id="hint"></div>
+          <div id="resultErea"></div>
+          <button id="qPopupClose" >閉じる</button>
       </div>
   </div>
-  <div class="popup nazo-nyo">
-    <div class="content">
-        <p>へにょにょーん</p>
-        <button class="close" value="nazo-nyo">閉じる</button>
-    </div>
 </div>
 
 
@@ -117,7 +117,6 @@
 
     <h3>プロNリンク</h3>  
     
-    <button class="popupButton" value="nazo-non">ポップアップ表示</button>
-    <button class="popupButton" value="nazo-nyo">ポップアップ表示</button>
+    <button class="popupButton" value="question1">ポップアップ表示</button>
   </body>
 </html>
