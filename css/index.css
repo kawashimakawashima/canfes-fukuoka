@@ -73,6 +73,7 @@ body {
   background: #fff;
   padding: 5px;
   width: 50%;
+  border-radius: 10px;
 }
 #qTitle{
   font-weight: bold;
@@ -83,6 +84,24 @@ body {
 }
 #questionPopup.corrected #hintButton{
   display: none;
+}
+#answerButton {
+  background-color: #a6d3c8;
+  color: #FFFFFF;
+  
+  outline: none;
+}
+#resultErea{
+  color: #ff007f;
+}
+#qPopupClose{
+  border: none;
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, 0%);
 }
 #hint{
   display: none;
@@ -99,6 +118,17 @@ body {
 #questionPopup.corrected #answerInput{
   display: none;
 }
+
+#questionPopup.corrected #resultErea{
+  color: #a6d3c8;
+}
+
+@media screen and (max-width: 425px) {
+  #qContent{
+    width: 90%;
+  }
+}
+
 /* 背景系〜 */
 #backGround{
   background-image: url("../images/backgroundImage.png");
@@ -132,7 +162,7 @@ body {
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(255, 28, 28, 0.2);
+  background: #ff007f;
   animation: animate 25s linear infinite;
   bottom: -150px;
   

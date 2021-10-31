@@ -181,4 +181,17 @@
   .linkFrames{
     width: 300px;
   }
+  #aboutProN{
+    height: 205px;
+  }
+  #aboutText{
+    margin-top: 15px;
+  }
+  #aboutText h4{
+    font-size: 20px;
+  }
+  #aboutText h6{
+    font-size: 15px;
+    margin-left: 10px;
+  }
 }
