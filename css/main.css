@@ -106,7 +106,21 @@
   text-align: center;
 }
 
-
+#aboutNazotoki{
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(255, 113, 137);
+}
+#remainingText{
+  margin-bottom: 0.5rem;
+}
+#remainingText h5{
+  display: inline;
+}
+#remainingNumb{
+  color:#ff007f;
+  margin: 10px;
+}
 
 /* スマホ対応〜 */
 @media screen and (max-width: 768px) {

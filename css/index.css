@@ -1,19 +1,50 @@
 body {
   font-family: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";;
 }
-
 .outFrame {
   width: 90%;
   margin: auto;
   margin-top: 20px;
 }
 
-
+/* 大見出し */
+.bigTitle{
+  z-index: 2;
+  text-decoration: none;
+  position: relative;
+  padding: 30px;
+  padding-right: 800px;
+  background: #a6d3c8;
+}
+.bigTitle::before{
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}
+.bigTitle span{
+  position: absolute;
+  color: white;
+  transform: translateY(-30px);
+  font-size: 40px;
+}
 /* 雑にだけどスマホ対応〜 */
 @media screen and (max-width: 768px) {
   .outFrame {
     width: 90%;
     margin-top: 10px;
+  }
+
+  .bigTitle{
+    padding-right: 200px;
+    padding: 15px;
+  }
+  .bigTitle span{
+    transform: translateY(-16px);
+    font-size: 20px;
   }
 }
 
@@ -183,29 +214,6 @@ body {
   animation-duration: 11s;
 }
 
-.bigTitle{
-  z-index: 2;
-  text-decoration: none;
-  position: relative;
-  padding: 30px;
-  padding-right: 800px;
-  background: #a6d3c8;
-}
-.bigTitle::before{
-  position: absolute;
-  content: '';
-  top: 100%;
-  left: 0;
-  border: none;
-  border-bottom: solid 15px transparent;
-  border-right: solid 20px rgb(149, 158, 155);
-}
-.bigTitle span{
-  position: absolute;
-  color: white;
-  transform: translateY(-30px);
-    font-size: 40px;
-}
 
 @keyframes animate {
 

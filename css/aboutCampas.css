@@ -1,0 +1,21 @@
+#campasLocation{
+  margin-left: 25px;
+}
+#campasLocation h5{
+  margin-top: 5px;
+  font-size: 25px;
+}
+#campasLocation iframe{
+  width: 90%;
+}
+
+/* スマホ対応〜 */
+@media screen and (max-width: 768px) {
+  #campasLocation iframe{
+    height: 150px;
+  }
+  #campasLocation h5{
+    margin-top: 5px;
+    font-size: 10px;
+  }
+}

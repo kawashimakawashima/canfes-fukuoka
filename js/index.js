@@ -5,10 +5,11 @@ const colors=['black','white','#ff007f'];
 let questionName;
 
 $(document).ready(function() {
+  /*
   setInterval(function(){
     $($('.circles li')[1]).css('background', colors[Math.floor(Math.random() * colors.length)])
   },14000);
-
+*/
   $('.popupButton').on('click',function(){
     questionName=$(this).val();
     const prop = getQuestionProps(questionName);
@@ -68,7 +69,7 @@ if(sessionStorage.getItem('isFirst') != 'false') {
 
 
 const questions={
-  'question1':{'title':'へのん','questionImgUrl':'CF謎2.png', 'hint':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+  'question1':{'title':'へのん','questionImgUrl':'CFNazo_Cky54C.png', 'hint':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
 }
 
 async function makeHash(text){
