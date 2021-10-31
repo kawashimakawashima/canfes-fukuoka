@@ -26,16 +26,16 @@
   flex: 0 0 200px;
   height: 30px;
   padding-top: 10px;
-  background-color: #D3E0EF;
-  border-left: 1px solid #B0CEE9;
-  border-bottom: 1px solid #B0CEE9;
+  background-color: #a6d3c8;
+  border-left: 1px solid #b8d4cd;
+  border-bottom: 1px solid #b8d4cd;
   border-top: 1px solid #b0cee9;
   text-align: center;
 }
 
 .skeduler-headers > div:last-child,
 .skeduler-main-body > div > div.skeduler-cell  {
-  border-right: 1px solid #B0CEE9;
+  border-right: 1px solid #b8d4cd;
 }
 
 .skeduler-main {
@@ -53,12 +53,12 @@
   padding-left: 10px;
   padding-top: 3px;
   color: #333333;
-  border-right: 1px solid #B0CEE9;
-  border-left: 1px solid #B0CEE9;
+  border-right: 1px solid #b8d4cd;
+  border-left: 1px solid #b8d4cd;
 }
 
 .skeduler-main-timeline div:first-child {
-    border-top: 1px solid #B0CEE9;
+    border-top: 1px solid #b8d4cd;
 }
 
 .skeduler-main-body {
@@ -72,8 +72,8 @@
 
 .skeduler-main-timeline div:nth-child(even),
 .skeduler-main-body > div > div.skeduler-cell:nth-child(odd) {
-  border-top: 1px dotted #B0CEE9;
-  border-bottom: 1px solid #B0CEE9;
+  border-top: 1px dotted #b8d4cd;
+  border-bottom: 1px solid #b8d4cd;
 }
 
 .skeduler-main-body > div > div.skeduler-cell {
