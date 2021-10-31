@@ -40,12 +40,18 @@
 .detailFrame{
   position: relative;
   z-index: 1;
-  margin: -21px 20px 0px 20px;
+  margin: -5px 20px 0px 20px;
   width: 800px;
   height: 280px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   border: 5px solid #a6d3c8;
+}
+#campasLink iframe{
+  position: absolute;
+  border-radius: 10px;
+  width:100%;
+  height:100%;
 }
 
 .detailFrame > a{
