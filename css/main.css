@@ -123,11 +123,62 @@
 }
 
 /* スマホ対応〜 */
+
 @media screen and (max-width: 768px) {
+  .detailFrame{
+    width: 700px;
+  }
+  .linkFrames{
+    width: 730px;
+  }
+  .detailFrame > a{
+    transform: translate(605px, 245px);
+  }
+}
+@media screen and (max-width: 425px) {
   #topImage{
     height: 300px;
   }
   #linkFrames{
     width: 250px;
+  }
+  #aboutNazotoki h5{
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  #aboutNazotoki{
+    margin-top: 15px;
+    color: rgb(255, 113, 137);
+  }
+  #remainingText{
+    margin-bottom: 2px;
+  }
+  
+  .bigLink{
+    padding-right: 280px;
+  }
+  .bigLink::before{
+    border-right: solid 10px rgb(149, 158, 155);
+  }
+  .bigLink span{
+    font-size: 20px;
+  }
+
+  #remainingNumb{
+    margin: 5px;
+  }
+
+  .detailFrame{
+    width: 280px;
+    height: 880px;
+    margin: -5px 10px 0px 10px;
+  }
+  .detailFrame > a{
+    position: absolute;
+    transform: translate(180px, 840px);
+    text-decoration: none;
+  }
+  .linkFrames{
+    width: 300px;
   }
 }
