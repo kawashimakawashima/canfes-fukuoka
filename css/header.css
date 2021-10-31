@@ -8,7 +8,7 @@
 
 /* 今いる場所に下線的なのを。 */
 .nav-item.active {
-  border-bottom: solid 2px rgba(255,255,255,.55);
+  border-bottom: solid 2px rgba(255,255,254,.55);
 }
 .nav-item.active:hover {
   border-color: rgba(255,255,255,.75);
