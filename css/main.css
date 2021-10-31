@@ -1,3 +1,32 @@
+.linkFrames{
+  margin: auto;
+  margin-top: 20px;
+  width: 850px;
+}
+
+.bigLink{
+  z-index: 2;
+  text-decoration: none;
+  position: relative;
+  padding: 15px;
+  padding-right: 400px;
+  background: #a6d3c8;
+  }
+.bigLink span{
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  transform: translateY(-6px);
+}
+.bigLink::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}
 #topImage{
   height: 700px;
   text-align: center;
@@ -6,29 +35,26 @@
 #topImage > img{
   height: 100%;
 }
-#randomList{
+
+
+.detailFrame{
   position: relative;
   z-index: 1;
-  text-align: center;
-  margin: 0 auto;
-  width: 680px;
+  margin: -21px 20px 0px 20px;
+  width: 800px;
   height: 280px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 5px solid #a6d3c8;
 }
 
-#randomList::before {
-  content: "";
+.detailFrame > a{
   position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-  z-index: -1;
-  background-color:#f1f1f1;
-  transform: skewX(3deg);
-}
-#randomList > a{
-  position: absolute;
-  margin-left: 530px;
-  margin-top: 250px;
+  transform: translate(700px, 245px);
+  text-decoration: none;
 }
 .randomProject {
+  text-align: center;
   width : 200px;
   height: 200px;
   margin: auto;
@@ -44,32 +70,8 @@
   vertical-align: bottom;
 }
 
-
-
-#nowList{
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  margin: 0 auto;
-  width: 680px;
-  height: 280px;
-}
-
-#nowList::before {
-  content: "";
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-  z-index: -1;
-  background-color:#f1f1f1;
-  transform: skewX(3deg);
-}
-#nowList > a{
-  position: absolute;
-  margin-left: 530px;
-  margin-top: 250px;
-}
-
 .nowProject {
+  text-align: center;
   width : 200px;
   height: 200px;
   margin: auto;
@@ -83,4 +85,29 @@
   position: relative;
   z-index: -1;
   vertical-align: bottom;
+}
+
+#aboutProN{
+  height: 135px;
+}
+#aboutText{
+  margin: 10px;
+  margin-top: 25px;
+}
+#aboutText h6{
+  margin-left: 14px;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+
+/* スマホ対応〜 */
+@media screen and (max-width: 768px) {
+  #topImage{
+    height: 300px;
+  }
+  #linkFrames{
+    width: 250px;
+  }
 }
