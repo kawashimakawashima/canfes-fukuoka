@@ -42,9 +42,9 @@ function skeduleFromData(data){
   $("#skeduler-container").skeduler({
     headers: data[0],
     tasks: data[1],
-    cardTemplate: '<div class="projectTitle">${title}</div><div>${value}</div>',
+    cardTemplate: '<div class="projectTitle">${title}</div><div>${value}</div><a class="projectLink" href="./projects/"+t["url"]+".html">詳しくみる</a>',
     onClick: function (e, t) {
-      window.location.href = "./projects/"+t["url"]+".html";
+    //  window.location.href = "./projects/"+t["url"]+".html";
     }
   });
 
