@@ -183,6 +183,29 @@ body {
   animation-duration: 11s;
 }
 
+.bigTitle{
+  z-index: 2;
+  text-decoration: none;
+  position: relative;
+  padding: 30px;
+  padding-right: 800px;
+  background: #a6d3c8;
+}
+.bigTitle::before{
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}
+.bigTitle span{
+  position: absolute;
+  color: white;
+  transform: translateY(-30px);
+    font-size: 40px;
+}
 
 @keyframes animate {
 

@@ -1,6 +1,7 @@
 
 .skeduler-container {
   font-family: Helvetica, ​Arial, ​sans-serif;
+  color: white;
 }
 
 .skeduler-container * {
@@ -8,14 +9,14 @@
 }
 
 .skeduler-headers {
-  border-left: 1px solid #b0cee9;
+  border-left: 1px solid #b2c7c1;
   display: flex;
   padding-left: 60px;
   position: relative;
 }
 
 .skeduler-headers:before {
-  border-top: 1px solid #b0cee9;
+  border-top: 1px solid #b2c7c1;
   content: "";
   width: 60px;
   position: absolute;
@@ -27,15 +28,15 @@
   height: 30px;
   padding-top: 10px;
   background-color: #a6d3c8;
-  border-left: 1px solid #d9f8f0;
-  border-bottom: 1px solid #d9f8f0;
-  border-top: 1px solid #b0cee9;
+  border-left: 1px solid #b2c7c1;
+  border-bottom: 1px solid #b2c7c1;
+  border-top: 1px solid #b2c7c1;
   text-align: center;
 }
 
 .skeduler-headers > div:last-child,
 .skeduler-main-body > div > div.skeduler-cell  {
-  border-right: 1px solid #d9f8f0;
+  border-right: 1px solid #b2c7c1;
 }
 
 .skeduler-main {
@@ -53,12 +54,12 @@
   padding-left: 10px;
   padding-top: 3px;
   color: #333333;
-  border-right: 1px solid #d9f8f0;
-  border-left: 1px solid #d9f8f0;
+  border-right: 1px solid #b2c7c1;
+  border-left: 1px solid #b2c7c1;
 }
 
 .skeduler-main-timeline div:first-child {
-    border-top: 1px solid #d9f8f0;
+    border-top: 1px solid #b2c7c1;
 }
 
 .skeduler-main-body {
@@ -72,8 +73,8 @@
 
 .skeduler-main-timeline div:nth-child(even),
 .skeduler-main-body > div > div.skeduler-cell:nth-child(odd) {
-  border-top: 1px dotted #d9f8f0;
-  border-bottom: 1px solid #d9f8f0;
+  border-top: 1px dotted #b2c7c1;
+  border-bottom: 1px solid #b2c7c1;
 }
 
 .skeduler-main-body > div > div.skeduler-cell {
