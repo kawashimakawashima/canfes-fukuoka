@@ -10,7 +10,6 @@ $(document).ready(function() {
       randomProjects[i].iconUrl+'.png"></img></div>'
     ));
   }
-  
 
   const nowProjects = getNowProjects(new Date());
   for(let i = 0; i < nowProjects.length; i++){
