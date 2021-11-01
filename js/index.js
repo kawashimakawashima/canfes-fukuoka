@@ -1,4 +1,4 @@
-const { comparisonHash, getQuestionNames, getQuestionProps } = require('./questionData');
+import { comparisonHash, getQuestionNames, getQuestionProps } from './questionData.js';
 
 const colors=['black','white','#ff007f'];
 
