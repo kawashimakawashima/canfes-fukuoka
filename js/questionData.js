@@ -10,7 +10,7 @@ async function makeHash(text){
 }
 
 async function comparisonHash(text, questionName) {
-  result = false;
+  let result = false;
   await makeHash(text).then(hash=>{
     if(hash == questions[questionName].answer){
       result= true;
