@@ -14,6 +14,7 @@ $(document).ready(function() {
   let noCorrectedNumb = 0;
   for(let i = 0; i < questionNames.length; i++){
     if(sessionStorage.getItem(questionNames[i]) == 'false'){
+      console.log('あ');
       noCorrectedNumb++;
     }
   }
