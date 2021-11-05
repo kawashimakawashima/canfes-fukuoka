@@ -125,7 +125,7 @@ a:hover{
 
 /* 背景系〜 */
 #backGround{
-  background-image: url("../images/backgroundImage.png");
+  background-image: url("../images/background.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
