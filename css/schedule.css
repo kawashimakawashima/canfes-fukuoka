@@ -1,8 +1,9 @@
 .skeduler-container {
-  margin: 10px 0 0 30px;
   width: 866px;
   height: 600px;
   overflow: scroll;
+  margin: auto;
+  margin-top: 20px;
 }
 
 #headerSelect{
@@ -26,9 +27,10 @@
 /* 雑にだけどスマホ対応〜 */
 @media screen and (max-width: 768px) {
   .skeduler-container {
-    margin: 0 0 0 20px;
     width: 270px;
     height: 560px;
+    margin: auto;
+    margin-top: 20px;
   }
   
   #headerSelect{

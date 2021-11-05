@@ -1,12 +1,14 @@
 
 // socondとseven同居してるのあれだなぁ...
 const sevenBigSchedules = [
+  /*
   {"startTime":0.5 , "duration":0.5, "column":0, "id":1,
   "title":"こんなんだよ",  "url":"demo-dayo",  "iconUrl":"への島太郎", "value":"へのへのがへのへのでへのへの"},
   {"startTime":0.75, "duration":1.5, "column":0, "id":2,
   "title":"こんなんです",  "url":"demo-desu",  "iconUrl":"ヘブと"   , "value":"へのへのがへのへのでへのへの"},
   {"startTime":3   ,  "duration":1 , "column":0, "id":3,
   "title":"こんなんらしい", "url":"demo-rasii", "iconUrl":"への木"  , "value":"へのへのがへのへのでへのへの"}
+  */
 
 ]
 const sevenSmallSchedules = [

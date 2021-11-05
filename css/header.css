@@ -8,10 +8,10 @@
 
 /* 今いる場所に下線的なのを。 */
 .nav-item.active {
-  border-bottom: solid 2px rgba(255,255,255,.75);
+  border-bottom: solid 2px black;
 }
 .nav-item.active:hover {
-  border-color: rgba(255,255,255,1);
+  border-color: #003399;
 }
 
 /* ドロップダウン系 */
@@ -26,43 +26,47 @@
 }
 .dropDownButton{
   pointer-events: all;
-  color: rgba(255,255,255,.75);
+  color: black;
   background: none;
   border: none;
   pointer-events: auto;
 }
 .nav-item.active:hover .dropDownButton{
-  color: rgba(255,255,255,1);
+  color: #003399;
 }
-.dropDownButton:hover .nav-item.active {
-  color: rgba(255,255,255,1);
+.dropDownButton:hover {
+  color: #003399;
 }
 .dropDownButton:focus{
   outline: none;
 }
 .dropDown-item {
   pointer-events: all;
-  background-color: #a6d3c8d8;
+  background-color: rgba(216, 216, 216, 0.1);
+  border: 1px rgb(200, 200, 200) solid;
   height: 30px;
 }
 .dropDown-item a{
   margin: auto;
   margin-left: 6px;
   text-decoration: none;
-  color: rgba(255,255,255,.75);
-}
-.dropDown-item a:hover{
-  color: rgba(255,255,255,1);
+  color: black;
 }
 
 /* 色〜 */
 .navbar{
-  background-color: #a6d3c8;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  width: 100%;
+  top: 0px;
 }
 .navbar-dark .navbar-nav .nav-link{
-  color: rgba(255,255,255,.75);
+  color: black;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover{
-  color: rgba(255,255,255,1);
+  color: #003399;
+}
+.navbar-dark .navbar-brand {
+    color: black;
 }

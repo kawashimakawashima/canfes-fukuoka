@@ -1,3 +1,6 @@
+.outFrame{
+  text-align: center;
+}
 #campasLocation{
   margin-left: 25px;
 }
@@ -7,6 +10,7 @@
 }
 #campasLocation iframe{
   width: 90%;
+  border-radius: 10px;
 }
 
 /* スマホ対応〜 */

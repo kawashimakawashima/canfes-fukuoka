@@ -20,7 +20,7 @@
   <!-- js -->
   <script src="../jquery-skeduler-master/jquery.skeduler.js"></script>
   <script src="../js/header.js"></script>
-  <script src="../js/schedule.js" type=module></script>
+  <script src="../js/schedule.js" type="module"></script>
   <script src="../js/index.js" type="module"></script>
 </head>
 <body>
@@ -41,11 +41,12 @@
             <button class="dropDownButton">▼</button><br>
           </div>
           <ul class="dropDown" style="display: none;">
+            <!--
             <li class="dropDown-item"><a href="./projects/demo-dayo.html">こんなんだよ</a></li>
             <li class="dropDown-item"><a href="./projects/demo-desu.html">こんなんです</a></li>
             <li class="dropDown-item"><a href="./projects/demo-rasii.html">こんなんらしい</a></li>
-          </ul>
-        </li>
+            -->
+          </ul></li>
         <li class="nav-item active">
           <a class="nav-link" href="./schedule.html">スケジュール</a>
         </li>
@@ -73,11 +74,14 @@
       <li></li>
       <li></li>
     </ul>
+    <canvas id="waveCanvas"></canvas>
   </div >
 
   <!-- 中身 -->
   <div class="outFrame"> 
-    <div class="bigTitle"><span>タイムスケジュール</span></div>
+    <div class="bigTitle">タイムスケジュール</div>
+    <div class="underline"></div>
+      
     <body>
       <select id="headerSelect">
         <option value="sevenBig">七階大教室</option>
@@ -86,9 +90,10 @@
         <option value="online">オンライン</option>
       </select>
       <div id="skeduler-container"></div>
-
+      <!--
       <h3>テスト用</h3>
       <input type="date" id="testDate"><input type="time" id="testTime"><button id="testButton">実行</button>
+      -->
     </body>
   </div>
 </body>
