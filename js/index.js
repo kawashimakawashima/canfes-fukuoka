@@ -80,6 +80,20 @@ $(document).ready(function() {
 
 });
 
+$(function () {
+  $(window).scroll(function () {
+    const wHeight = $(window).height();
+    const scrollAmount = $(window).scrollTop();
+    $('.scrollanime').each(function () {
+      const targetPosition = $(this).offset().top;
+      if(scrollAmount > targetPosition - wHeight + 60) {
+            console.log("あ");
+              $(this).addClass("fadeInDown");
+          }
+      });
+  });
+});
+
 
 /* 以下ページ下の波用関数等。完全コピペですはい。 */
 
@@ -191,3 +205,4 @@ function drawSine(canvas, t, zoom, delay) {
         context.lineTo(i, unit*y+xAxis);
     }
 }
+
