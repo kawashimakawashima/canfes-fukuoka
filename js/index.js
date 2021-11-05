@@ -185,7 +185,7 @@ function drawSine(canvas, t, zoom, delay) {
     context.moveTo(yAxis, unit*y+xAxis); //スタート位置にパスを置く
 
     // Loop to draw segments (横幅の分、波を描画)
-    for (i = yAxis; i <= canvas.width + 10; i += 10) {
+    for (let i = yAxis; i <= canvas.width + 10; i += 10) {
         x = t+(-yAxis+i)/unit/zoom;
         y = Math.sin(x - delay)/3;
         context.lineTo(i, unit*y+xAxis);
