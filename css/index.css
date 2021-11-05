@@ -142,7 +142,7 @@ a:hover{
 #waveCanvas{
   width: 100%;
   position: absolute;
-  bottom: 55px;
+  bottom: 0px;
 }
 
 .circles{
