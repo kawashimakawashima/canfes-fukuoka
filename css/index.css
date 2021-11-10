@@ -4,7 +4,7 @@
 } 
 .fadeInDown {
     animation-name: fadeInDown;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 @keyframes fadeInDown {
