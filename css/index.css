@@ -104,10 +104,17 @@ a:hover{
   font-weight: bold;
   font-size: 30px;
 }
-#hintButton{
+#hint1Button{
   cursor: pointer;
 }
-#questionPopup.corrected #hintButton{
+#hint2Button{
+  cursor: pointer;
+}
+#questionPopup.corrected #hint1Button{
+  display: none;
+}
+
+#questionPopup.corrected #hint2Button{
   display: none;
 }
 #answerButton {
@@ -128,13 +135,22 @@ a:hover{
   text-align: center;
   transform: translate(-50%, 0%);
 }
-#hint{
+.hintText{
   display: none;
 }
-#hint.active{
+.hintText.active{
   display: block;
 }
-#questionPopup.corrected #hint{
+#hint2{
+  display: none;
+}
+#hint2.active{
+  display: block;
+}
+#questionPopup.corrected #hint1{
+  display: none;
+}
+#questionPopup.corrected #hint2{
   display: none;
 }
 #questionPopup.corrected #answerButton{
@@ -153,6 +169,7 @@ a:hover{
     width: 90%;
   }
 }
+
 /* 背景系〜 */
 #backGround{
   background-image: url("../images/background.png");

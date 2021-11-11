@@ -18,7 +18,7 @@
 
   <!-- js -->
   <script src="../js/header.js"></script>
-  <script src="../js/index.js" type="module"></script>
+  <script src="../js/index.js"></script>
   <script src="../js/main.js" type="module"></script>
 </head>
 <body>
@@ -39,11 +39,11 @@
             <button class="dropDownButton">▼</button><br>
           </div>
           <ul class="dropDown" style="display: none;">
-            <!--
+          <!--
             <li class="dropDown-item"><a href="./projects/demo-dayo.html">こんなんだよ</a></li>
             <li class="dropDown-item"><a href="./projects/demo-desu.html">こんなんです</a></li>
             <li class="dropDown-item"><a href="./projects/demo-rasii.html">こんなんらしい</a></li>
-            -->
+          -->
           </ul></li>
         <li class="nav-item">
           <a class="nav-link" href="./schedule.html">スケジュール</a>
@@ -60,18 +60,23 @@
 
   <!-- 謎用のpopup --> 
   <div id="questionPopup">
-      <div id="qContent">
-          <div id="qTitle"></div>
-          <img></img>
-          <input id="answerInput"></input><button id="answerButton">回答</button>
-          <div id="hintButton"></div>
-          <div id="hint"></div>
-          <div id="resultErea"></div>
-          <button id="qPopupClose" >閉じる</button>
+    <div id="qContent">
+      <div id="qTitle"></div>
+      <img></img>
+      <input id="answerInput"></input><button id="answerButton">回答</button>
+      <div id="hint1">
+        <div id="hint1Button"></div>
+        <div class="hintText"></div>
       </div>
+      <div id="hint2">
+        <div id="hint2Button"></div>
+        <div class="hintText"></div>
+      </div>
+      <div id="resultErea"></div>
+      <button id="qPopupClose" >閉じる</button>
+    </div>
   </div>
-</div>
-
+  
 
   <!-- 背景 -->
   <div id="backGround" >
@@ -151,9 +156,7 @@
       <h5>ぜひ解いてみてくださいね！</h5>
     </div>
   
-<!--
-    <button class="popupButton" value="question1">謎(テスト)</button>
-    -->
+    <button class="popupButton" value="CFNazo_mDhQae">謎(テスト)</button>
     </div>
   </body>
 </html>

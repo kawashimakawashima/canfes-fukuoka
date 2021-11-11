@@ -1,4 +1,4 @@
-import { comparisonHash, getQuestionNames, getQuestionProps } from './questionData.js';
+//import { comparisonHash, getQuestionNames, getQuestionProps } from './questionData.js';
 
 const colors=['black','white','#ff007f'];
 
@@ -25,10 +25,15 @@ $(document).ready(function() {
     questionName=$(this).val();
     const prop = getQuestionProps(questionName);
     $('#qTitle').text(prop.title);
-    $('#questionPopup img').attr('src','../images/questions/'+prop.questionImgUrl);
-    $('#hintButton').text('ヒントを表示');
-    $('#hint').text(prop.hint);
-    $('#hint').removeClass('active');
+    $('#questionPopup img').attr('src','../images/questions/'+questionName+'.png');
+    $('#hint1Button').text('ヒント1を表示');
+    $('#hint2Button').text('ヒント2を表示');
+    $('#hint1 .hintText').text(prop.hint1);
+    $('#hint2 .hintText').text(prop.hint2);
+    $('#hint2').removeClass('active');
+    $('#hint1Button').removeClass('active');
+    $('#hint2Button').removeClass('active');
+    console.log($('#hint1 .hintText'));
 
     const answer=sessionStorage.getItem(questionName);
     if(answer == 'false'){
@@ -56,19 +61,31 @@ $(document).ready(function() {
       }
     });
   })
-  $('#hintButton').on('click', function(){
-    if($('#hint').hasClass('active')){
-      $('#hint').removeClass('active');
-      $('#hintButton').text('ヒントを表示');
+  $('#hint1Button').on('click', function(){
+    if($('#hint1 .hintText').hasClass('active')){
+      $('#hint1 .hintText').removeClass('active');
+      $('#hint2').removeClass('active');
+      $('#hint1Button').text('ヒント1を表示');
     }else{
-      $('#hint').addClass('active');
-      $('#hintButton').text('ヒントを非表示');
+      $('#hint1 .hintText').addClass('active');
+      $('#hint2').addClass('active');
+      $('#hint1Button').text('ヒント1を非表示');
+    }
+  });
+  $('#hint2Button').on('click', function(){
+    if($('#hint2 .hintText').hasClass('active')){
+      $('#hint2 .hintText').removeClass('active');
+      $('#hint2Button').text('ヒント2を表示');
+    }else{
+      $('#hint2 .hintText').addClass('active');
+      $('#hint2Button').text('ヒント2を非表示');
     }
   });
 
   $('#qPopupClose').on('click',function(){
     $('#questionPopup').removeClass('active');
-    $('#hint').removeClass('active');
+    $('.hintText').removeClass('active');
+    $('#hint2').removeClass('active');
   });
   if(sessionStorage.getItem('isFirst') != 'false') {
     sessionStorage.setItem('isFirst', 'false');
@@ -206,3 +223,45 @@ function drawSine(canvas, t, zoom, delay) {
     }
 }
 
+
+
+
+
+const questions={
+  'CFNazo_Cky54C' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+  'CFNazo_Ds9yeA' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+  'CFNazo_GrkAhm' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+  'CFNazo_HaDiL5' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+  'CFNazo_i57t63' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+  'CFNazo_mDhQae' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+  'CFNazo_nBXLMF' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+  'CFNazo_s2QZ62' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+  'CFNazo_tAU2FQ' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+  'CFNazo_wsFEgB' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
+}
+
+async function makeHash(text){
+  const uint8  = new TextEncoder().encode(text)
+  const digest = await crypto.subtle.digest('SHA-256', uint8)
+  return Array.from(new Uint8Array(digest)).map(v => v.toString(16).padStart(2,'0')).join('')
+}
+
+async function comparisonHash(text, questionName) {
+  let result = false;
+  await makeHash(text).then(hash=>{
+    if(hash == questions[questionName].answer){
+      result= true;
+    }
+  })
+  return result;
+}
+
+function getQuestionNames(){
+  return Object.keys(questions);
+}
+
+function getQuestionProps(questionName){
+  return {'questionImgUrl':questions[questionName].questionImgUrl,'hint1':questions[questionName].hint1,'hint2':questions[questionName].hint2};
+}
+
+//export {makeHash, comparisonHash, getQuestionNames, getQuestionProps};
