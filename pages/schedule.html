@@ -20,17 +20,22 @@
   <!-- js -->
   <script src="../jquery-skeduler-master/jquery.skeduler.js"></script>
   <script src="../js/header.js"></script>
-  <script src="../js/schedule.js"></script>
+  <script src="../js/schedule.js" type="module"></script>
   <script src="../js/index.js" type="module"></script>
 </head>
 <body>
   <!-- ヘッダー -->
   <nav class="navbar navbar-expand-sm navbar-dark">
     <a class="navbar-brand" href="./main.html">キャンフェスサイト</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav4">
+    <button class="navbar-toggler" type="button"
+      aria-controls="navmenu1"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      data-toggle="collapse"
+      data-target="#navmenu1">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navmenu1">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="./main.html">トップ</a>

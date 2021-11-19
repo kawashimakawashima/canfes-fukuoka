@@ -7,4 +7,10 @@ $(document).ready(function() {
       $('.dropDown').hide();
     }
   });
+
+  //なんか動かんかったから手動のnavbar
+  $('.navbar-toggler').on('click',function(){
+    $('#navmenu1').toggle();
+  });
+
 })
