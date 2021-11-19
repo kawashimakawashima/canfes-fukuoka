@@ -83,7 +83,7 @@ a:hover{
   
   .bigTitle{
     padding-right: 200px;
-    padding: 15px;
+    padding: 0;
   }
   .bigTitle span{
     transform: translateY(-16px);
