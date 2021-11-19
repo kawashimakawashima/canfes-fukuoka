@@ -1,6 +1,8 @@
 /* 親要素の判定無効にして子要素のを有効にすると親要素のhover判定が子要素のとこの分になる(らしい) */
 .nav-item{
   pointer-events: none;
+  background-color: none;
+  z-index: 10;
 }
 .nav-link {
   pointer-events: auto;
@@ -82,4 +84,11 @@
 .navbar-dark .navbar-toggler {
   color: rgba(0,0,0,.55);
   border-color: rgba(0,0,0,.1);
+}
+
+
+@media screen and (max-width: 575px) {
+  .nav-item{
+    background-color: rgb(255,255,255,0.9);
+  }  
 }
