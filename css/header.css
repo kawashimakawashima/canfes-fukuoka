@@ -70,3 +70,7 @@
 .navbar-dark .navbar-brand {
     color: black;
 }
+
+.navbar-dark .navbar-brand:hover {
+  color: #003399;
+}
