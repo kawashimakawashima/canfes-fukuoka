@@ -1,28 +1,37 @@
-//import { comparisonHash, getQuestionNames, getQuestionProps } from './questionData.js';
+import { comparisonHash, getQuestionNames, getQuestionProps } from './questionData.js';
 
 const colors=['black','white','#ff007f'];
+
 
 let questionName;
 $(document).ready(function() {
   init();
-/*
+  
+  /*
   setInterval(function(){
     $($('.circles li')[1]).css('background', colors[Math.floor(Math.random() * colors.length)])
   },14000);
   */
 
-  const questionNames = getQuestionNames();
+ const questionNames = getQuestionNames();
+  if(sessionStorage.getItem('isFirst') != 'false') {
+    sessionStorage.setItem('isFirst', 'false');
+    for(let i = 0; i < questionNames.length; i++){
+      sessionStorage.setItem(questionNames[i], 'false');
+    }
+  }
+  
   let noCorrectedNumb = 0;
   for(let i = 0; i < questionNames.length; i++){
     if(sessionStorage.getItem(questionNames[i]) == 'false'){
-      console.log('あ');
       noCorrectedNumb++;
     }
   }
   $('#remainingNumb').text(noCorrectedNumb);
 
   $('.popupButton').on('click',function(){
-    questionName=$(this).val();
+    let questionName=$(this).val();
+    console.log(questionName);
     const prop = getQuestionProps(questionName);
     $('#qTitle').text(prop.title);
     $('#questionPopup img').attr('src','../images/questions/'+questionName+'.png');
@@ -33,8 +42,7 @@ $(document).ready(function() {
     $('#hint2').removeClass('active');
     $('#hint1Button').removeClass('active');
     $('#hint2Button').removeClass('active');
-    console.log($('#hint1 .hintText'));
-
+    
     const answer=sessionStorage.getItem(questionName);
     if(answer == 'false'){
       $('#questionPopup').removeClass('corrected');  
@@ -86,15 +94,16 @@ $(document).ready(function() {
     $('#questionPopup').removeClass('active');
     $('.hintText').removeClass('active');
     $('#hint2').removeClass('active');
+    $('#answerInput').val('');
   });
-  if(sessionStorage.getItem('isFirst') != 'false') {
-    sessionStorage.setItem('isFirst', 'false');
-    for(let i = 0; i < questionNames.length; i++){
-      sessionStorage.setItem(questionNames[i], 'false');
-    }
-  }
-  const data = sessionStorage.getItem('isFirst');
 
+  /* ハッシュ関数調べる用 */
+  $('#makeHashButton').on('click', async function(){
+    await makeHash($("#hashText").val()).then(hash=>{
+      console.log($("#hashText").val());
+      console.log(hash);
+    });
+  });
 });
 
 $(function () {
@@ -104,8 +113,7 @@ $(function () {
     $('.scrollanime').each(function () {
       const targetPosition = $(this).offset().top;
       if(scrollAmount > targetPosition - wHeight + 60) {
-            console.log("あ");
-              $(this).addClass("fadeInDown");
+            $(this).addClass("fadeInDown");
           }
       });
   });
@@ -223,45 +231,3 @@ function drawSine(canvas, t, zoom, delay) {
     }
 }
 
-
-
-
-
-const questions={
-  'CFNazo_Cky54C' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
-  'CFNazo_Ds9yeA' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
-  'CFNazo_GrkAhm' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
-  'CFNazo_HaDiL5' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
-  'CFNazo_i57t63' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
-  'CFNazo_mDhQae' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
-  'CFNazo_nBXLMF' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
-  'CFNazo_s2QZ62' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
-  'CFNazo_tAU2FQ' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
-  'CFNazo_wsFEgB' :{ 'hint1':'へのーの導きがあらんことを', 'hint2':'へのーの導きがあらんことを', 'answer':'90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'},
-}
-
-async function makeHash(text){
-  const uint8  = new TextEncoder().encode(text)
-  const digest = await crypto.subtle.digest('SHA-256', uint8)
-  return Array.from(new Uint8Array(digest)).map(v => v.toString(16).padStart(2,'0')).join('')
-}
-
-async function comparisonHash(text, questionName) {
-  let result = false;
-  await makeHash(text).then(hash=>{
-    if(hash == questions[questionName].answer){
-      result= true;
-    }
-  })
-  return result;
-}
-
-function getQuestionNames(){
-  return Object.keys(questions);
-}
-
-function getQuestionProps(questionName){
-  return {'questionImgUrl':questions[questionName].questionImgUrl,'hint1':questions[questionName].hint1,'hint2':questions[questionName].hint2};
-}
-
-//export {makeHash, comparisonHash, getQuestionNames, getQuestionProps};

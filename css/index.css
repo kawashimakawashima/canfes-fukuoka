@@ -45,6 +45,20 @@ a:hover{
   padding-top: 80px;
 }
 
+/* 文字とか震えるアニメーション */
+.popupButton {
+  display: inline-flex;
+  animation: hurueru .1s  infinite;
+}
+
+@keyframes hurueru {
+  0% {transform: translate(0px, 0px) rotateZ(0deg)}
+  25% {transform: translate(2px, 2px) rotateZ(1deg)}
+  50% {transform: translate(0px, 2px) rotateZ(0deg)}
+  75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+  100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
 /* 大見出し */
 
 .bigTitle{
@@ -92,6 +106,8 @@ a:hover{
 }
 #questionPopup img{
   width: 80%;
+  margin: 15px 0 15px
+ 0;
 }
 
 #qContent{
@@ -99,6 +115,7 @@ a:hover{
   padding: 5px;
   width: 50%;
   border-radius: 10px;
+  position: relative;
 }
 #qTitle{
   font-weight: bold;
@@ -118,7 +135,7 @@ a:hover{
   display: none;
 }
 #answerButton {
-  background-color: #a6d3c8;
+  background-color: #000000;
   color: #FFFFFF;
   
   outline: none;
@@ -126,14 +143,34 @@ a:hover{
 #resultErea{
   color: #ff007f;
 }
-#qPopupClose{
-  border: none;
-  border-radius: 5px;
-  width: 80px;
-  height: 30px;
+#qPopupClose {
+  top: 0;
+  right: 0;
+  transform: translate(25%, -25%);
   position: absolute;
-  text-align: center;
-  transform: translate(-50%, 0%);
+  border: rgb(187, 187, 187) 3px solid;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 0 auto;
+}
+ 
+#qPopupClose::before, #qPopupClose::after { /* 共通設定 */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px; /* 棒の幅（太さ） */
+  height: 30px; /* 棒の高さ */
+  background: #333;
+}
+ 
+#qPopupClose::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+ 
+#qPopupClose::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
 }
 .hintText{
   display: none;

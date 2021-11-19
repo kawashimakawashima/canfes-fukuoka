@@ -1,15 +1,19 @@
 
 #topImage{
-  height: 700px;
+  width: 100%;
   text-align: center;
   margin-bottom: 20px;
 }
 #topImage > img{
-  height: 100%;
+  width: 100%;
 }
-#topImage > h1{
-  margin-top: 300px;
+#topImageForPC{
+  display: block;
 }
+#topImageForPhone{
+  display: none;
+}
+
 
 .linkFrames{
   margin: auto;
@@ -115,7 +119,7 @@
   margin-bottom: 0.5rem;
 }
 #remainingText h5{
-  display: inline;
+  display: inline-flex;
 }
 #remainingNumb{
   color:#ff007f;
@@ -127,10 +131,13 @@
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 425px) {
-  #topImage{
-    height: 300px;
+  #topImageForPC{
+    display: none;
   }
-  
+  #topImageForPhone{
+    display: block;
+  }
+
   #aboutNazotoki h5{
     font-size: 12px;
     margin-bottom: 2px;

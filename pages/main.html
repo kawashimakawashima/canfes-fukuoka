@@ -18,7 +18,7 @@
 
   <!-- js -->
   <script src="../js/header.js"></script>
-  <script src="../js/index.js"></script>
+  <script src="../js/index.js" type="module"></script>
   <script src="../js/main.js" type="module"></script>
 </head>
 <body>
@@ -61,19 +61,20 @@
   <!-- 謎用のpopup --> 
   <div id="questionPopup">
     <div id="qContent">
-      <div id="qTitle"></div>
       <img></img>
       <input id="answerInput"></input><button id="answerButton">回答</button>
-      <div id="hint1">
-        <div id="hint1Button"></div>
-        <div class="hintText"></div>
-      </div>
-      <div id="hint2">
-        <div id="hint2Button"></div>
-        <div class="hintText"></div>
+      <div id="hintArea">
+        <div id="hint1">
+          <div id="hint1Button"></div>
+          <div class="hintText"></div>
+        </div>
+        <div id="hint2">
+          <div id="hint2Button"></div>
+          <div class="hintText"></div>
+        </div>
       </div>
       <div id="resultErea"></div>
-      <button id="qPopupClose" >閉じる</button>
+      <button id="qPopupClose"></button>
     </div>
   </div>
   
@@ -99,8 +100,8 @@
   <div class="outFrame">
     
     <div id="topImage">
-      <h1>現在鋭意作成中🙇‍♂️</h1>
-      <img></img>
+      <img id="topImageForPC" src="../images/PC用top画(仮).jpg"></img>
+      <img id="topImageForPhone" src="../images/スマホ用top画(仮).jpg"></img>
     </div>
     
     <div id="projectsLink" class="linkFrames scrollanime">
@@ -152,11 +153,22 @@
 
     <div id="aboutNazotoki" class="scrollanime">
       <h5>このサイトには、いくつかの謎が隠されています。</h5>
-      <div id="remainingText"><h5>あなたがまだ正解していない謎は、</h5><h5 id="remainingNumb"></h5><h5>問です。</h5></div>
+      <div id="remainingText"><h5>あなたがまだ正解していない謎は、</h5><data class="popupButton" value="CFNazo_Ds9yeA"><h5 id="remainingNumb"></h5></data><h5>問です。</h5></div>
       <h5>ぜひ解いてみてくださいね！</h5>
     </div>
-  
+  <!--
+    <input type="text" id="hashText"><button id="makeHashButton" value="CFNazo_Cky54C">makeHash</button>
+    <button class="popupButton" value="CFNazo_Cky54C">謎(テスト)</button>
+    <button class="popupButton" value="CFNazo_Ds9yeA">謎(テスト)</button>
+    <button class="popupButton" value="CFNazo_GrkAhm">謎(テスト)</button>
+    <button class="popupButton" value="CFNazo_HaDiL5">謎(テスト)</button>
+    <button class="popupButton" value="CFNazo_i57t63">謎(テスト)</button>
     <button class="popupButton" value="CFNazo_mDhQae">謎(テスト)</button>
+    <button class="popupButton" value="CFNazo_nBXLMF">謎(テスト)</button>
+    <button class="popupButton" value="CFNazo_s2QZ62">謎(テスト)</button>
+    <button class="popupButton" value="CFNazo_tAU2FQ">謎(テスト)</button>
+    <button class="popupButton" value="CFNazo_wsFEgB">謎(テスト)</button>
+    -->
     </div>
   </body>
 </html>
