@@ -52,7 +52,7 @@ a:hover{
   cursor: pointer;
   cursor: hand;
   display: inline-flex;
-  animation: hurueru .2s  infinite;
+  animation: hurueru .1s  infinite;
 }
 
 @keyframes hurueru {
