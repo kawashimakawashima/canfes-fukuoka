@@ -49,6 +49,8 @@ a:hover{
 }
 /* 文字とか震えるアニメーション */
 .popupButton {
+  cursor: pointer;
+  cursor: hand;
   display: inline-flex;
   animation: hurueru .1s  infinite;
 }

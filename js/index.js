@@ -30,14 +30,8 @@ $(document).ready(function() {
   $('#remainingNumb').text(noCorrectedNumb);
   
   
-  //なんか動かんかったから手動のnavbar
-  $('.navbar-toggler').on('click',function(){
-    $('#navmenu1').show();
-  });
-
   $('.popupButton').on('click',function(){
-    let questionName=$(this).val();
-    console.log(questionName);
+    questionName=$(this).val();
     const prop = getQuestionProps(questionName);
     $('#qTitle').text(prop.title);
     $('#questionPopup img').attr('src','../images/questions/'+questionName+'.png');
