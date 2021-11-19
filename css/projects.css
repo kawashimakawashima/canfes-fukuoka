@@ -28,13 +28,17 @@
   box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
 }
 
-  .projectLink h5:before {
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 0;
-    height: 0;
-    content: '';
-    border-top: 10px solid rgb(149, 158, 155);
-    border-left: 10px solid transparent;
-  }
+.projectLink h5:before {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 0;
+  content: '';
+  border-top: 10px solid rgb(149, 158, 155);
+  border-left: 10px solid transparent;
+}
+#title{
+  width: 100%;
+  text-align: center;
+}

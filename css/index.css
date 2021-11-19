@@ -44,7 +44,9 @@ a:hover{
   margin: auto;
   padding-top: 80px;
 }
-
+.popHideText{
+  display: inline-flex;
+}
 /* 文字とか震えるアニメーション */
 .popupButton {
   display: inline-flex;
