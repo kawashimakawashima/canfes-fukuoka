@@ -52,14 +52,14 @@ a:hover{
   cursor: pointer;
   cursor: hand;
   display: inline-flex;
-  animation: hurueru .1s  infinite;
+  animation: hurueru .2s  infinite;
 }
 
 @keyframes hurueru {
   0% {transform: translate(0px, 0px) rotateZ(0deg)}
-  25% {transform: translate(2px, 2px) rotateZ(1deg)}
-  50% {transform: translate(0px, -2px) rotateZ(0deg)}
-  75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+  25% {transform: translate(1px, 1px) rotateZ(1deg)}
+  50% {transform: translate(0px, -1px) rotateZ(0deg)}
+  75% {transform: translate(1px, 0px) rotateZ(-1deg)}
   100% {transform: translate(0px, 0px) rotateZ(0deg)}
 }
 

@@ -29,7 +29,7 @@ $(document).ready(function() {
   }
   $('#remainingNumb').text(noCorrectedNumb);
   
-  
+  /*
   $('.popupButton').on('click',function(){
     questionName=$(this).val();
     const prop = getQuestionProps(questionName);
@@ -53,7 +53,7 @@ $(document).ready(function() {
     }
     $('#questionPopup').addClass('active');
   });
-
+*/
   $('#answerButton').on('click', function(){
     const answerInput=$('#answerInput').val();
     comparisonHash(answerInput,questionName).then(result => {
