@@ -28,6 +28,12 @@ $(document).ready(function() {
     }
   }
   $('#remainingNumb').text(noCorrectedNumb);
+  
+  
+  //なんか動かんかったから手動のnavbar
+  $('.navbar-toggler').on('click',function(){
+    $('#navmenu1').show();
+  });
 
   $('.popupButton').on('click',function(){
     let questionName=$(this).val();
@@ -230,4 +236,3 @@ function drawSine(canvas, t, zoom, delay) {
         context.lineTo(i, unit*y+xAxis);
     }
 }
-
