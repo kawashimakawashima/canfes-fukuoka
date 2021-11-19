@@ -230,3 +230,5 @@ function drawSine(canvas, t, zoom, delay) {
         context.lineTo(i, unit*y+xAxis);
     }
 }
+
+
