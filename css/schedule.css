@@ -22,8 +22,12 @@
 }
 .skeduler-main-body > div > .skeduler-task-placeholder > div:hover .projectLink{
   display: block;
+  color: white;
 }
 
+.skeduler-main-body > div > .skeduler-task-placeholder > div:hover .projectLink:hover{
+  color: #003399;
+}
 /* 雑にだけどスマホ対応〜 */
 @media screen and (max-width: 768px) {
   .skeduler-container {
