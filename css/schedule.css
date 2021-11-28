@@ -1,5 +1,5 @@
 .skeduler-container {
-  width: 866px;
+  width: 688px;
   height: 600px;
   overflow: scroll;
   margin: auto;
@@ -8,6 +8,13 @@
 
 #headerSelect{
   margin: 0 0 0 30px
+}
+.scheduler-header{
+  border-right: 1px solid rgb(154, 173, 204);
+}
+.scheduler-main-colum{
+  border-left: 1px solid rgb(154, 173, 204);
+  width: 200px;
 }
 #timeLine{
   position : absolute;
@@ -28,6 +35,19 @@
 .skeduler-main-body > div > .skeduler-task-placeholder > div:hover .projectLink:hover{
   color: #003399;
 }
+
+.skeduler-container.onlyConstant{
+  width: 202px;
+}
+.skeduler-container.onlyConstant .skeduler-headers{
+  padding: 0;
+}
+.skeduler-container.onlyConstant .skeduler-main-timeline{
+  display: none;
+}
+.skeduler-container.onlyConstant #timeLine{
+  display: none;
+}
 /* 雑にだけどスマホ対応〜 */
 @media screen and (max-width: 768px) {
   .skeduler-container {
@@ -39,6 +59,9 @@
   
   #headerSelect{
     margin: 0 0 0 20px
+  }
+  #timeLine{
+    width: 201px;
   }
 }
 

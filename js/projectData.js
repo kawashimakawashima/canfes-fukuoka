@@ -1,11 +1,10 @@
 
-
 const stageSchedules = [
-  {"startTime":0.5 , "duration":0.5, "column":0, "id":1,
+  {"startTime":0.5 , "duration":0.5, "id":1,
   "title":"こんなんだよ",  "url":"demo-dayo",  "iconUrl":"への島太郎", "value":"へのへのがへのへのでへのへの"},
-  {"startTime":0.75, "duration":1.5, "column":0, "id":2,
+  {"startTime":0.75, "duration":1.5, "id":2,
   "title":"こんなんです",  "url":"demo-desu",  "iconUrl":"ヘブと"   , "value":"へのへのがへのへのでへのへの"},
-  {"startTime":3   ,  "duration":1 , "column":0, "id":3,
+  {"startTime":3   ,  "duration":1 , "id":3,
   "title":"こんなんらしい", "url":"demo-rasii", "iconUrl":"への木"  , "value":"へのへのがへのへのでへのへの"}
   
 ]
@@ -13,7 +12,7 @@ const boothSchedules = [
 
 ]
 const constantSchedules = [
-  {"startTime":10 , "duration":1, "column":2, "id":4,
+  {"startTime":0 , "duration":1 , "id":4,
   "title":"こんなん",  "url":"demo-dayo",  "iconUrl":"への島太郎", "value":"へのへのが"},
 ]
 
@@ -22,12 +21,36 @@ function getSchedulesFromPraces(value) {
   let headeres = [];
   switch(value){
     case "all":
-      schedules = $.merge(schedules, stageSchedules);
-      schedules = $.merge(schedules, boothSchedules);
-      schedules = $.merge(schedules, constantSchedules);
+      schedules = $.merge(schedules,stageSchedules.map(function(elemnt) {
+        elemnt.column = 0;
+        return elemnt;
+      }));
+      schedules = $.merge(schedules,boothSchedules.map(function(elemnt) {
+        elemnt.column = 1;
+        return elemnt;
+      }));
+      schedules = $.merge(schedules,constantSchedules.map(function(elemnt) {
+        elemnt.column = 2;
+        return elemnt;
+      }));
+      
       headeres = ["ステージ", "ブース", "常設展示"];
       break;
+    case "stage":  
+      schedules = stageSchedules.map(function(elemnt) {elemnt.column = 0; return elemnt;});
+      headeres = ["ステージ"];
+      break;
+    case "booth":  
+      schedules = boothSchedules.map(function(elemnt) {elemnt.column = 0; return elemnt;});
+      headeres = ["ブース"];
+      break;
+    case "constant":  
+      schedules = constantSchedules.map(function(elemnt) {elemnt.column = 0; return elemnt;});
+      headeres = ["常設展示"];
+      break;
+  
   }
+  console.log(schedules)
   return [headeres,schedules];
 }
 function getRandomProject(numb) {
@@ -108,6 +131,6 @@ function getNowProjects(date) {
 // 魂の
 export default null;
 
-export {getSchedulesFromPraces, getRandomProject, isHolding};
+export {getSchedulesFromPraces, getRandomProject, isHolding, getNowProjects};
 
 // ローカルだとcorsだかなんだかが出てテストできないので、いじる場合はまるっとjsにコピペしてexport・importをコメントアウト＆htmlの<script type=module>⇨<script>でやるといい感じ
