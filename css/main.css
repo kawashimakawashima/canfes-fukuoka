@@ -96,18 +96,21 @@
   vertical-align: bottom;
 }
 
-#aboutProN{
-  height: 135px;
+#proNInfo{
+  height: 420px;
 }
-#aboutText{
-  margin: 10px;
-  margin-top: 25px;
+#proNImage{
+  max-width: 100%;
 }
-#aboutText h6{
-  margin-left: 14px;
-  font-size: 18px;
-  text-align: center;
-  line-height: 30px;
+#proNInfo a{
+  position: static;
+}
+#infoForPC{
+  display: block;
+}
+#infoForPhone{
+  display: none;
+  font-size: 12px;
 }
 
 #aboutNazotoki{
@@ -138,6 +141,18 @@
     display: block;
   }
 
+  #proNInfo{
+    height: 245px;
+  }
+  #infoTitle{
+    font-size: 15px;
+  }
+  #infoForPC{
+    display: none;
+  }
+  #infoForPhone{
+    display: block;
+  }
   #aboutNazotoki h5{
     font-size: 12px;
     margin-bottom: 2px;
@@ -157,20 +172,6 @@
   .detailFrame{
     height: 880px;
     margin: -5px 10px 0px 10px;
-  }
-  
-  #aboutProN{
-    height: 240px;
-  }
-  #aboutText{
-    margin-top: 15px;
-  }
-  #aboutText h4{
-    font-size: 20px;
-  }
-  #aboutText h6{
-    font-size: 15px;
-    margin-left: 10px;
   }
 }
 
