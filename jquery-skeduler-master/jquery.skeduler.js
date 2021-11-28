@@ -169,7 +169,7 @@
     // Add headers
     var headerContainer = div.clone().addClass(settings.headerContainerCssClass);
     settings.headers.forEach(function (element) {
-      div.clone().text(element).appendTo(headerContainer);
+      div.clone().text(element).addClass('scheduler-header').appendTo(headerContainer);
     }, this);
     skedulerEl.append(headerContainer);
 
@@ -194,6 +194,7 @@
     // Populate grid
     for (var j = 0; j < settings.headers.length; j++) {
       var el = gridColumnElement.clone();
+      el.addClass('scheduler-main-colum');
 
       var placeholder = div.clone().addClass(settings.taskPlaceholderCssClass);
       appendTasks(placeholder, settings.tasks.filter(function (t) { return t.column == j }));

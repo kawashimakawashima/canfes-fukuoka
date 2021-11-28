@@ -1,4 +1,4 @@
-//import {getSchedulesFromPraces, isHolding} from "./projectData.js";
+import {getSchedulesFromPraces, isHolding} from "./projectData.js";
 
 
 $(document).ready(function() {
@@ -6,6 +6,11 @@ $(document).ready(function() {
     skeduleFromData(getSchedulesFromPraces("sevenBig"));
   }else{ 
     skeduleFromData(getSchedulesFromPraces("all"));
+  
+    // 常設展示のところだけずらす
+    $($(".scheduler-main-colum")[2]).css({'margin-left':'20px'})
+    $($(".scheduler-header")[2]).css({'margin-left':'20px'})
+  
     $('#headerSelect').hide();
   }
   
@@ -48,20 +53,19 @@ function skeduleFromData(data){
     }
   });
 
+  // 今の時間のところに線を引く
   let now = new Date();
   $(".skeduler-main-body").append($("<div id='timeLine' style='display:none'></div>"));
-  if(isHolding(now)) {
-    let h = now.getHours();
-    let mi = now.getMinutes();
-    $("#timeLine").css({"transform":"translateY("+((h-13+(mi/60))*102)+"px","display":"absolute"});
-  }
+    if(isHolding(now)) {
+      let h = now.getHours();
+      let mi = now.getMinutes();
+      $("#timeLine").css({"transform":"translateY("+((h-13+(mi/60))*102)+"px","display":"absolute"});
+    }
 }
 
+/*
 
-
-
-// socondとseven同居してるのあれだなぁ...
-const sevenBigSchedules = [
+const stageSchedules = [
   {"startTime":0.5 , "duration":0.5, "column":0, "id":1,
   "title":"こんなんだよ",  "url":"demo-dayo",  "iconUrl":"への島太郎", "value":"へのへのがへのへのでへのへの"},
   {"startTime":0.75, "duration":1.5, "column":0, "id":2,
@@ -70,14 +74,12 @@ const sevenBigSchedules = [
   "title":"こんなんらしい", "url":"demo-rasii", "iconUrl":"への木"  , "value":"へのへのがへのへのでへのへの"}
   
 ]
-const sevenSmallSchedules = [
+const boothSchedules = [
 
 ]
-const secondSchedules = [
-
-]
-const onlineSchedules = [
-
+const constantSchedules = [
+  {"startTime":10 , "duration":1, "column":2, "id":4,
+  "title":"こんなん",  "url":"demo-dayo",  "iconUrl":"への島太郎", "value":"へのへのが"},
 ]
 
 function getSchedulesFromPraces(value) {
@@ -85,24 +87,10 @@ function getSchedulesFromPraces(value) {
   let headeres = [];
   switch(value){
     case "all":
-      schedules = $.merge(sevenBigSchedules, sevenSmallSchedules, secondSchedules, onlineSchedules);
-      headeres = ["七階大教室", "七階小教室", "二階", "オンライン"];
-      break;
-    case "sevenBig":
-      schedules = sevenBigSchedules;
-      headeres = ["七階大教室"];
-      break;
-    case "sevenSmall":
-      schedules = sevenSmallSchedules;
-      headeres = ["七階小教室"];
-      break;
-    case "second":
-      schedules = secondSchedules;
-      headeres = ["二階"];
-      break;
-    case "online":
-      schedules = onlineSchedules;
-      headeres = ["オンライン"];
+      schedules = $.merge(schedules, stageSchedules);
+      schedules = $.merge(schedules, boothSchedules);
+      schedules = $.merge(schedules, constantSchedules);
+      headeres = ["ステージ", "ブース", "常設展示"];
       break;
   }
   return [headeres,schedules];
@@ -116,7 +104,6 @@ function getRandomProject(numb) {
   }
   return result;
 }
-
 const Xday = "2021-12-05";
 
 function formatDate(dt) {
@@ -137,8 +124,7 @@ function isHolding(date) {
 
   return false;
 }
-
-
+/*
 function getNowProjects(date) {
   let result=[];
   if(isHolding(date)){
@@ -183,6 +169,7 @@ function getNowProjects(date) {
 
   return result;
 }
+*/
 // 魂の
 //export default null;
 
