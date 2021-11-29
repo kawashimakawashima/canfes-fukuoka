@@ -4,8 +4,8 @@
       var origin = 'https://henohenon.github.io/canfes-sekai';
       window.addEventListener('message', function(event) {
         // 送信元が指定のオリジンと一致していれば処理を行う
-        if(event.origin === origin) {
-          var message = event.data;
+        //if(event.origin === origin) {
+        var message = event.data;
 
           // メッセージが'get'ならlocalstorageの値を返す
           if(message === 'get') {
@@ -16,7 +16,7 @@
           else {
             localStorage.setItem(key, value);
           }
-        }
+        //}
       });
     })();
   </script>
