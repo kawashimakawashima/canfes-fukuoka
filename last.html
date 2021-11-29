@@ -14,6 +14,9 @@
           }
           // getでなければメッセージを分割してlocalstorageに保存する
           else {
+            var messageArray = message.split(',');
+            var key = messageArray[0];
+            var value = messageArray[1];
             localStorage.setItem(key, value);
           }
         //}
