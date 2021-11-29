@@ -54,6 +54,10 @@
   right: 10px;
   text-decoration: none;
 }
+
+#seeing{
+  height: 300px;
+}
 .randomProject {
   text-align: center;
   width : 250px;
@@ -78,7 +82,6 @@
   -webkit-text-stroke: 1px #FFF;
   text-stroke: 1px #FFF;
 }
-
 .nowProject {
   text-align: center;
   width : 200px;
@@ -100,6 +103,7 @@
   height: 420px;
 }
 #proNImage{
+  width: 100%;
   max-width: 890px;
 }
 #proNInfo a{

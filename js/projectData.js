@@ -53,15 +53,21 @@ function getSchedulesFromPraces(value) {
   console.log(schedules)
   return [headeres,schedules];
 }
+
 function getRandomProject(numb) {
   let result=[];
-  let projects = sevenBigSchedules.concat(sevenSmallSchedules, secondSchedules, onlineSchedules);
+  let projects=[];
+  projects = $.merge(projects,stageSchedules);
+  projects = $.merge(projects,boothSchedules);
+  projects = $.merge(projects,constantSchedules);
+  
   for(let i = 0; i < numb; i++){
     let projectNumb=Math.floor(Math.random() * projects.length);
     result.push(projects.splice(projectNumb,1)[0]); 
   }
   return result;
 }
+
 const Xday = "2021-12-05";
 
 function formatDate(dt) {
