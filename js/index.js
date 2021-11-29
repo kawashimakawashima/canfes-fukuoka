@@ -13,23 +13,27 @@ $(document).ready(function() {
   },14000);
   */
 
- const questionNames = getQuestionNames();
+  const questionNames = getQuestionNames();
   if(sessionStorage.getItem('isFirst') != 'false') {
     sessionStorage.setItem('isFirst', 'false');
     for(let i = 0; i < questionNames.length; i++){
       sessionStorage.setItem(questionNames[i], 'false');
     }
   }
-  
+
   let noCorrectedNumb = 0;
   for(let i = 0; i < questionNames.length; i++){
     if(sessionStorage.getItem(questionNames[i]) == 'false'){
       noCorrectedNumb++;
     }
   }
-  $('#remainingNumb').text(noCorrectedNumb);
+  await comparisonHash(localStorage.getItem('last') == 'CFNazo_A2gupC').then(result => {
+    if(!result){
+      noCorrectedNumb++;
+    }
+    $('#remainingNumb').text(noCorrectedNumb);
+  });
   
-  /*
   $('.popupButton').on('click',function(){
     questionName=$(this).val();
     const prop = getQuestionProps(questionName);
@@ -53,7 +57,6 @@ $(document).ready(function() {
     }
     $('#questionPopup').addClass('active');
   });
-*/
   $('#answerButton').on('click', function(){
     const answerInput=$('#answerInput').val();
     comparisonHash(answerInput,questionName).then(result => {
@@ -230,5 +233,6 @@ function drawSine(canvas, t, zoom, delay) {
         context.lineTo(i, unit*y+xAxis);
     }
 }
+
 
 
