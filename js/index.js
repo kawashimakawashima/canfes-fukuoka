@@ -27,7 +27,7 @@ $(document).ready(function() {
       noCorrectedNumb++;
     }
   }
-  await comparisonHash(localStorage.getItem('last') == 'CFNazo_A2gupC').then(result => {
+  comparisonHash(localStorage.getItem('last') == 'CFNazo_A2gupC').then(result => {
     if(!result){
       noCorrectedNumb++;
     }
