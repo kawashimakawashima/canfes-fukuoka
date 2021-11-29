@@ -131,6 +131,6 @@ function getNowProjects(date) {
 // 魂の
 export default null;
 
-export {getSchedulesFromPraces, getRandomProject, isHolding, getNowProjects};
+export {getSchedulesFromPraces, getRandomProject, isHolding};
 
 // ローカルだとcorsだかなんだかが出てテストできないので、いじる場合はまるっとjsにコピペしてexport・importをコメントアウト＆htmlの<script type=module>⇨<script>でやるといい感じ
