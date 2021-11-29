@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/slider.css">
 
   <!-- js -->
   <script src="../js/header.js"></script>
@@ -38,18 +39,21 @@
         <li class="nav-item active">
           <a class="nav-link" href="./main.html">トップ</a>
         </li>
+        <!--
         <li class="nav-item hasDropDown">
           <div>
             <a class="nav-link" href="./projects.html">企画一覧</a>
             <button class="dropDownButton">▼</button><br>
           </div>
           <ul class="dropDown" style="display: none;">
-          <!--
             <li class="dropDown-item"><a href="./projects/demo-dayo.html">こんなんだよ</a></li>
             <li class="dropDown-item"><a href="./projects/demo-desu.html">こんなんです</a></li>
             <li class="dropDown-item"><a href="./projects/demo-rasii.html">こんなんらしい</a></li>
-          -->
-        </ul></li>
+          </ul></li>
+        -->
+        <li class="nav-item">
+          <a class="nav-link" href="./sightSeeing.html">福岡観光案内</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="./schedule.html">スケジュール</a>
         </li>
@@ -108,7 +112,7 @@
       <img id="topImageForPC" src="../images/PC用top画(仮).jpg"></img>
       <img id="topImageForPhone" src="../images/スマホ用top画(仮).jpg"></img>
     </div>
-    
+    <!--
     <div id="projectsLink" class="linkFrames scrollanime">
       <a class="bigLink" href="./projects.html">
         企画一覧
@@ -118,13 +122,30 @@
         <a href="./projects.html">詳しく見る</a>
       </div>
     </div>
-    
+    -->
+    <div id="campasLink" class="linkFrames scrollanime">
+      <a class="bigLink" href="./sightSeeing.html">
+        福岡観光案内
+        <div class="underline"></div>
+      </a>
+      <!-- Slider -->
+    </div>
+    <div id="seeing" class="detailFrame">
+      <ul class="sliderList">
+        <li class="sliderItem" style='background-color:moccasin;'></li>
+        <li class="sliderItem" style='background-color:honeydew;'></li>
+        <li class="sliderItem" style='background-color:peachpuff;'></li>
+        <li class="sliderItem" style='background-color:firebrick;'></li>
+        <li class="sliderItem" style='background-color:goldenrod;'></li>
+      </ul>
+      <a href="./sightSeeing.html">詳しく見る</a>
+    </div>
     <div id="scheduleLink" class="linkFrames scrollanime">
       <a class="bigLink" href="./schedule.html">
         スケジュール
         <div class="underline"></div>
       </a>
-      <div id="nowList" class="detailFrame">
+      <div id="randomList" class="detailFrame">
         <a href="./schedule.html">詳しく見る</a>
       </div>
       <!--
@@ -173,7 +194,7 @@
     <button class="popupButton" value="CFNazo_s2QZ62">謎(テスト)</button>
     <button class="popupButton" value="CFNazo_tAU2FQ">謎(テスト)</button>
     <button class="popupButton" value="CFNazo_wsFEgB">謎(テスト)</button>
-    </div>
     -->
+    </div>
   </body>
 </html>
