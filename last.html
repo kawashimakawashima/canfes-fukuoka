@@ -1,0 +1,26 @@
+<body>
+  <script>
+    (function() {
+      //var origin = 'http://B.com';
+      window.addEventListener('message', function(event) {
+        // 送信元が指定のオリジンと一致していれば処理を行う
+        //if(event.origin === 'file:///Users/kitamuratakeru/workspace/canfes-sekai') {
+          var message = event.data;
+
+          // メッセージが'get'ならlocalstorageの値を返す
+          if(message === 'get') {
+            var storageData = localStorage.getItem('test');
+            event.source.postMessage(storageData, event.origin);
+          }
+          // getでなければメッセージを分割してlocalstorageに保存する
+          else {
+            var messageArray = message.split(',');
+            var key = messageArray[0];
+            var value = messageArray[1];
+            localStorage.setItem(key, value);
+          }
+        //}
+      });
+    })();
+  </script>
+</body>
