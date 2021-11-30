@@ -1,11 +1,14 @@
 
 const stageSchedules = [
-  {"startTime":0.5 , "duration":0.5, "id":1,
-  "title":"こんなんだよ",  "url":"demo-dayo",  "iconUrl":"への島太郎", "value":"へのへのがへのへのでへのへの"},
-  {"startTime":0.75, "duration":1.5, "id":2,
-  "title":"こんなんです",  "url":"demo-desu",  "iconUrl":"ヘブと"   , "value":"へのへのがへのへのでへのへの"},
-  {"startTime":3   ,  "duration":1 , "id":3,
-  "title":"こんなんらしい", "url":"demo-rasii", "iconUrl":"への木"  , "value":"へのへのがへのへのでへのへの"}
+  {"startTime":0 , "duration":1.6, "id":1,
+  "title":"オープニング",  "url":"opening",  "iconUrl":"", "value":""},
+  {"startTime":0.15 , "duration":0.05, "id":1,
+  "title":"ピタゴラスイッチ",  "url":"pythagora",  "iconUrl":"", "value":""},
+  {"startTime":0.5 , "duration":0.15, "id":1,
+  "title":"職員バンド",  "url":"staffBand",  "iconUrl":"", "value":""},
+  {"startTime":0.55 , "duration":0.05, "id":1,
+  "title":"TAバンド",  "url":"opening",  "iconUrl":"", "value":""},
+  
   
 ]
 const boothSchedules = [
