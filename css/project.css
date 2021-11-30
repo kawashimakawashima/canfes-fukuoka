@@ -1,3 +1,49 @@
-.projectImage{
-  transform: translate(7.5%,0%);
+.imageArea{
+  height: 500px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+}
+.imageArea img{
+  height: 100%;
+  margin: auto;
+}
+
+.veryBigTitle{
+  z-index: 2;
+  text-align: center;
+  color: black;
+  position: relative;
+  font-size: 30px;  
+}
+
+.subArea{
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  word-break: break-word;
+  margin: auto;
+}
+
+.subArea img{
+  height: 500px;
+}
+.subArea h6{
+  font-size: 25px;
+}
+.picturesArea{
+  width: 90%;
+  margin: auto;  
+}
+.infoArea{
+  width: 90%;
+  margin: auto;
+}
+img{
+  margin: auto;
+}
+
+.picturesArea{
+  margin-top: 40px;
 }

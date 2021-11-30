@@ -7,12 +7,14 @@
 #topImage > img{
   width: 100%;
 }
+/*
 #topImageForPC{
   display: block;
 }
 #topImageForPhone{
   display: none;
 }
+*/
 
 
 .linkFrames{
@@ -138,13 +140,14 @@
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 425px) {
+  /*
   #topImageForPC{
     display: none;
   }
   #topImageForPhone{
     display: block;
   }
-
+*/
   #proNInfo{
     height: 245px;
   }
