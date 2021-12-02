@@ -1,154 +1,44 @@
 
-const stageSchedules = [
-  {"startTime":0 , "duration":0.16, "id":1,
-  "title":"オープニング",  "url":"opening",  "iconUrl":"", "value":""},
-  {"startTime":0.25 , "duration":0.08, "id":2,
-  "title":"ピタゴラスイッチ",  "url":"pythagora",  "iconUrl":"", "value":""},
-  {"startTime":0.5 , "duration":0.25, "id":3,
-  "title":"職員バンド",  "url":"staffBand",  "iconUrl":"", "value":""},
-  {"startTime":0.92 , "duration":0.25, "id":4,
-  "title":"TAバンド",  "url":"opening",  "iconUrl":"", "value":""},
-  {"startTime":1.32 , "duration":0.25, "id":5,
-  "title":"今日好き再現",  "url":"likeToday",  "iconUrl":"", "value":""},
-  {"startTime":1.84 , "duration":0.16, "id":6,
-  "title":"バイオリン",  "url":"violin",  "iconUrl":"", "value":""},
-  {"startTime":2.16 , "duration":0.16, "id":7,
-  "title":"太川さん企画",  "url":"violin",  "iconUrl":"", "value":""},
-  {"startTime":2.84 , "duration":0.5, "id":8,
-  "title":"マジック",  "url":"magic",  "iconUrl":"", "value":""},
-  {"startTime":3.5 , "duration":0.16, "id":9,
-  "title":"表彰",  "url":"magic",  "iconUrl":"", "value":""},
-  {"startTime":3.84 , "duration":0.16, "id":8,
-  "title":"エンディング",  "url":"ending",  "iconUrl":"", "value":""},
-]
-const boothSchedules = [
-]
-const constantSchedules = [
-  {"startTime":0 , "duration":1 , "id":4,
-  "title":"こんなん",  "url":"demo-dayo",  "iconUrl":"への島太郎", "value":"へのへのが"},
-]
-
-function getSchedulesFromPraces(value) {
-  let schedules = [];
-  let headeres = [];
-  switch(value){
-    case "all":
-      schedules = $.merge(schedules,stageSchedules.map(function(elemnt) {
-        elemnt.column = 0;
-        return elemnt;
-      }));
-      schedules = $.merge(schedules,boothSchedules.map(function(elemnt) {
-        elemnt.column = 1;
-        return elemnt;
-      }));
-      schedules = $.merge(schedules,constantSchedules.map(function(elemnt) {
-        elemnt.column = 2;
-        return elemnt;
-      }));
-      
-      headeres = ["ステージ", "ブース", "常設展示"];
-      break;
-    case "stage":  
-      schedules = stageSchedules.map(function(elemnt) {elemnt.column = 0; return elemnt;});
-      headeres = ["ステージ"];
-      break;
-    case "booth":  
-      schedules = boothSchedules.map(function(elemnt) {elemnt.column = 0; return elemnt;});
-      headeres = ["ブース"];
-      break;
-    case "constant":  
-      schedules = constantSchedules.map(function(elemnt) {elemnt.column = 0; return elemnt;});
-      headeres = ["常設展示"];
-      break;
-  
-  }
-  console.log(schedules)
-  return [headeres,schedules];
+const questions={
+  'CFNazo_Cky54C' :{'answeres':['f4ab3dae84c3ff953c3492d1b308a5a31eee9e31fcaad628b01695cb7f929da7'], 'hint1':'答えは四文字です。それぞれの文字は「+」で区切られています。', 'hint2':'指定された色の部分に注目しましょう。'},
+  'CFNazo_Ds9yeA' :{'answeres':['7f9cee78c399f26679f004947ae5872b380643bdf790a179d17289c9c33619ce'], 'hint1':'小学校で習う表の形をしています。', 'hint2':'五十音表です。'},
+  'CFNazo_GrkAhm' :{'answeres':['427101d91632c0fad636a9d962a78d7b4ea381a7849a4929da3dd34f62d320f0'], 'hint1':'「しなじー」を、青色の矢印に当てはめてみましょう。', 'hint2':'縦読みしてみましょう。'},
+  'CFNazo_HaDiL5' :{'answeres':['d9a0d68b30061d93781cd89a58f36d6307ab79caf47212ac0649c87bfbcdff15'], 'hint1':'イラストを文字に変換しましょう。', 'hint2':'「くつ」のイラストは、2つに分かれています。'},
+  'CFNazo_i57t63' :{'answeres':['d5181e3b433fdc5d28e2745a1edaa5fd86f8d127f1b07d8742d9d277068feb88'], 'hint1':'指示に従って、言葉を変換しましょう。', 'hint2':'青い矢印は、対義語を表しています。'},
+  'CFNazo_mDhQae' :{'answeres':['b8f455d557d67b105dad2bc095c6b950336b666a7f92303eb2d57e9cfaedd94c'], 'hint1':'問題文がなぜかローマ字になっています。', 'hint2':'「うらみな」をローマ字に変換しましょう。'},
+  'CFNazo_nBXLMF' :{'answeres':['f8797412334f868e6b153ad2c3c8336f9d8d373334bd0628aa9e88d021b8c136'], 'hint1':'指示に従って、全ての単語を漢字に変換します。', 'hint2':'文字の赤い部分が、カタカナに見えてきませんか？'},
+  'CFNazo_s2QZ62' :{'answeres':['82aaaa0e49d09afb502548b3cd50adf3799ca4ba62226de3bbb80c03978dde75'], 'hint1':'右上のイラストは、「くじら」です。', 'hint2':'左の図は、時刻を表しています。'},
+  'CFNazo_tAU2FQ' :{'answeres':['6f37ffe3ec1d6fb722858dafc76a692e8d4617c520b04e32767615ce0694cb84'], 'hint1':'文字の色に法則性がありそうです。', 'hint2':'緑色の文字は、全て「い」になっています。'},
+  'CFNazo_wsFEgB' :{'answeres':['4519ba204a8a88e7a39c266f47d2b39a0ba2f364101aa4e7bcc661f94cb1351b'], 'hint1':'', 'hint2':''},
+  'CFNazo_A2gupC' :{'answeres':['90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'], 'hint1':'', 'hint2':''},
 }
 
-function getRandomProject(numb) {
-  let result=[];
-  let projects=[];
-  projects = $.merge(projects,stageSchedules);
-  projects = $.merge(projects,boothSchedules);
-  projects = $.merge(projects,constantSchedules);
-  
-  for(let i = 0; i < numb; i++){
-    let projectNumb=Math.floor(Math.random() * projects.length);
-    result.push(projects.splice(projectNumb,1)[0]); 
-  }
+async function makeHash(text){
+  const uint8  = new TextEncoder().encode(text)
+  const digest = await crypto.subtle.digest('SHA-256', uint8)
+  return Array.from(new Uint8Array(digest)).map(v => v.toString(16).padStart(2,'0')).join('')
+}
+
+async function comparisonHash(text, questionName) {
+  let result = false;
+  await makeHash(text).then(hash=>{
+    for(let i = 0; i < questions[questionName].answeres.length; i++){
+      console.log(questions[questionName].answeres[i]==hash);
+      if(hash == questions[questionName].answeres[i]){
+        result = true;
+        break;
+      }
+    }
+  })
   return result;
 }
 
-const Xday = "2021-12-05";
-
-function formatDate(dt) {
-  var y = dt.getFullYear();
-  var m = ('00' + (dt.getMonth()+1)).slice(-2);
-  var d = ('00' + dt.getDate()).slice(-2);
-  return (y + '-' + m + '-' + d);
+function getQuestionNames(){
+  return Object.keys(questions);
 }
 
-function isHolding(date) {
-  let formatedDate = formatDate(date);
-  if(formatedDate==Xday){
-    let time = date.getHours()*60+date.getMinutes()
-    if(time >= 13*60+0 && time <= 18*60+0){
-      return true;
-    }
-  }
-
-  return false;
+function getQuestionProps(questionName){
+  return {'questionImgUrl':questions[questionName].questionImgUrl,'hint1':questions[questionName].hint1,'hint2':questions[questionName].hint2};
 }
-/*
-function getNowProjects(date) {
-  let result=[];
-  if(isHolding(date)){
-    let nowTime = date.getHours()*60+date.getMinutes();
-    for(let i = 0; i < sevenBigSchedules.length; i++){
-      if(nowTime < (13+sevenBigSchedules[i].startTime)*60){
-        break;
-      }else{
-        if((13+sevenBigSchedules[i].startTime+sevenBigSchedules[i].duration)*60 > nowTime){
-          result.push(sevenBigSchedules[i]);
-        }
-      }
-    }
-    for(let i = 0; i< sevenSmallSchedules.length; i++){
-      if(nowTime < (13+sevenSmallSchedules[i].startTime)*60){
-        break;
-      }else{
-        if((13+sevenSmallSchedules[i].startTime+sevenSmallSchedules[i].duration)*60 > nowTime){
-          result.push(sevenSmallSchedules[i]);
-        }
-      }
-    }
-    for(let i = 0; i< secondSchedules.length; i++){
-      if(nowTime < (13+secondSchedules[i].startTime)*60){
-        break;
-      }else{
-        if((13+secondSchedules[i].startTime+secondSchedules[i].duration)*60 > nowTime){
-          result.push(secondSchedules[i]);
-        }
-      }
-    }
-    for(let i = 0; i< onlineSchedules.length; i++){
-      if(nowTime < (13+onlineSchedules[i].startTime)*60){
-        break;
-      }else{
-        if((13+onlineSchedules[i].startTime+onlineSchedules[i].duration)*60 > nowTime){
-          result.push(onlineSchedules[i]);
-        }
-      }
-    }
-  }
 
-  return result;
-}
-*/
-// 魂の
-export default null;
-
-export {getSchedulesFromPraces, getRandomProject, isHolding};
-
-// ローカルだとcorsだかなんだかが出てテストできないので、いじる場合はまるっとjsにコピペしてexport・importをコメントアウト＆htmlの<script type=module>⇨<script>でやるといい感じ
+export {makeHash, comparisonHash, getQuestionNames, getQuestionProps};

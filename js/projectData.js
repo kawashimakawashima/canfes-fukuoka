@@ -1,18 +1,27 @@
 
 const stageSchedules = [
-  {"startTime":0 , "duration":1.6, "id":1,
+  {"startTime":0 , "duration":0.16, "id":1,
   "title":"オープニング",  "url":"opening",  "iconUrl":"", "value":""},
-  {"startTime":0.15 , "duration":0.05, "id":1,
+  {"startTime":0.25 , "duration":0.08, "id":2,
   "title":"ピタゴラスイッチ",  "url":"pythagora",  "iconUrl":"", "value":""},
-  {"startTime":0.5 , "duration":0.15, "id":1,
+  {"startTime":0.5 , "duration":0.25, "id":3,
   "title":"職員バンド",  "url":"staffBand",  "iconUrl":"", "value":""},
-  {"startTime":0.55 , "duration":0.05, "id":1,
+  {"startTime":0.92 , "duration":0.25, "id":4,
   "title":"TAバンド",  "url":"opening",  "iconUrl":"", "value":""},
-  
-  
+  {"startTime":1.32 , "duration":0.25, "id":5,
+  "title":"今日好き再現",  "url":"likeToday",  "iconUrl":"", "value":""},
+  {"startTime":1.84 , "duration":0.16, "id":6,
+  "title":"バイオリン",  "url":"violin",  "iconUrl":"", "value":""},
+  {"startTime":2.16 , "duration":0.16, "id":7,
+  "title":"太川さん企画",  "url":"violin",  "iconUrl":"", "value":""},
+  {"startTime":2.84 , "duration":0.5, "id":8,
+  "title":"マジック",  "url":"magic",  "iconUrl":"", "value":""},
+  {"startTime":3.5 , "duration":0.16, "id":9,
+  "title":"表彰",  "url":"magic",  "iconUrl":"", "value":""},
+  {"startTime":3.84 , "duration":0.16, "id":8,
+  "title":"エンディング",  "url":"ending",  "iconUrl":"", "value":""},
 ]
 const boothSchedules = [
-
 ]
 const constantSchedules = [
   {"startTime":0 , "duration":1 , "id":4,
