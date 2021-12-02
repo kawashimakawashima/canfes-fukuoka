@@ -32,7 +32,9 @@ $(document).ready(function() {
     if(!result){
       noCorrectedNumb++;
     }
-    $('#remainingNumb').text(noCorrectedNumb);
+    $('.remainingNumb').each(function(index,element) {
+      element.text(noCorrectedNumb);
+    });
   });
   
   $('.popupButton').on('click',function(){
@@ -66,7 +68,9 @@ $(document).ready(function() {
         $('#questionPopup').addClass('corrected');
         sessionStorage.setItem(questionName, answerInput);
         noCorrectedNumb--;
-        $('#remainingNumb').text(noCorrectedNumb);
+        $('.remainingNumb').each(function(index,element) {
+          element.text(noCorrectedNumb);
+        });
       }else{
         $('#resultErea').text('残念...不正解です');
         $('#answerInput').val('');
