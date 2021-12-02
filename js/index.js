@@ -31,11 +31,7 @@ $(document).ready(function() {
 
   window.addEventListener('message', function(event) {
     // 送信元が指定のオリジンと一致していれば処理を行う
-    console.log("test")
-    console.log(event)
-    console.log(event.origin,origin)
     if(event.origin === origin) {
-      alert(event.data);
       noCorrectedNumb++;
       $('.remainingNumb').each(function(index,element) {
         $(element).text(noCorrectedNumb);
@@ -43,7 +39,6 @@ $(document).ready(function() {
    
     }
   });
-  console.log(iframeWindow);
   iframeWindow.postMessage('get', origin);
 
   $('.remainingNumb').each(function(element) {
