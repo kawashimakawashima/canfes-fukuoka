@@ -29,20 +29,25 @@ $(document).ready(function() {
   var iframeWindow = document.querySelector('#iframe').contentWindow;
   var origin = 'https://henohenon.github.io';
 
+  // 11問目用
+  noCorrectedNumb++;
+  
+  $('.remainingNumb').each(function(element) {
+    $(element).text(noCorrectedNumb);
+  });
+
+
+  iframeWindow.postMessage('get', origin);
+
   window.addEventListener('message', function(event) {
     // 送信元が指定のオリジンと一致していれば処理を行う
     if(event.origin === origin) {
-      noCorrectedNumb++;
+      noCorrectedNumb--;
       $('.remainingNumb').each(function(index,element) {
         $(element).text(noCorrectedNumb);
       });  
    
     }
-  });
-  iframeWindow.postMessage('get', origin);
-
-  $('.remainingNumb').each(function(element) {
-    $(element).text(noCorrectedNumb);
   });
 
   
