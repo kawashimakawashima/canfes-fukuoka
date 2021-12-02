@@ -33,14 +33,15 @@ $(document).ready(function() {
     // 送信元が指定のオリジンと一致していれば処理を行う
     console.log("test")
     console.log(event)
-    //if(event.origin === origin) {
+    console.log(event.origin,origin)
+    if(event.origin === origin) {
       alert(event.data);
       noCorrectedNumb++;
       $('.remainingNumb').each(function(index,element) {
         $(element).text(noCorrectedNumb);
       });  
    
-    //}
+    }
   });
   console.log(iframeWindow);
   iframeWindow.postMessage('get', origin);
