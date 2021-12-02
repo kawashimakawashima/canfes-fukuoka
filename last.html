@@ -8,7 +8,7 @@
         var message = event.data;
 
           // メッセージが'get'ならlocalstorageの値を返す
-          if(message === 'get') {
+          if(message == 'get') {
             var storageData = localStorage.getItem('last');
             event.source.postMessage(storageData, event.origin);
           }

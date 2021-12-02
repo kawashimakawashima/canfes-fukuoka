@@ -2,13 +2,32 @@
   font-size: 20px;
 }
 .secondaryArea{
-  height: 500px;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+  height: 700px;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
 }
 .secondaryArea img{
-  width: 500px;
   margin: 10px;
-  height: 300px;
+}
+.sliderList{
+  height: 500px;
+}
+#imageFrom{
+  float: right;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 425px) {
+  .secondaryArea img{
+    margin: 0px;
+  }
+  .sliderList{
+    height: 200px;
+  }
+  .secondaryArea{
+    height: 600px;
+  }
 }

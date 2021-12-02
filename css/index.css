@@ -44,6 +44,24 @@ a:hover{
   margin: auto;
   padding-top: 80px;
 }
+
+
+/* 大見出し */
+
+.bigTitle{
+  z-index: 2;
+  text-align: center;
+  color: black;
+  position: relative;
+  font-size: 25px;
+}
+
+.underline{
+  border-bottom: 2px black solid;
+  width: 10%;
+  margin: auto;
+}
+
 .popHideText{
   display: inline-flex;
 }
@@ -51,8 +69,9 @@ a:hover{
 .popupButton {
   cursor: pointer;
   cursor: hand;
+  */
+  cursor: pointer;
   display: inline-flex;
-  animation: hurueru .1s  infinite;
 }
 
 @keyframes hurueru {
@@ -78,6 +97,7 @@ a:hover{
   width: 10%;
   margin: auto;
 }
+
 /* 雑にだけどスマホ対応〜 */
 @media screen and (max-width: 768px) {
   

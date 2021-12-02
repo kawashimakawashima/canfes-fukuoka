@@ -7,14 +7,13 @@
 #topImage > img{
   width: 100%;
 }
-/*
 #topImageForPC{
   display: block;
 }
 #topImageForPhone{
   display: none;
 }
-*/
+
 
 
 .linkFrames{
@@ -81,8 +80,6 @@
   color: black;
   position: absolute;
   font-weight: 50px;
-  -webkit-text-stroke: 1px #FFF;
-  text-stroke: 1px #FFF;
 }
 .nowProject {
   text-align: center;
@@ -140,14 +137,25 @@
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 425px) {
-  /*
   #topImageForPC{
     display: none;
   }
   #topImageForPhone{
     display: block;
   }
-*/
+  .detailFrame{
+    height: 880px;
+    margin: -5px 10px 0px 10px;
+  }
+  #seeing{
+    height: 225px;
+  }
+  .sliderList{
+    height: 200px;
+  }
+  .sliderItem{
+    margin: auto;
+  }
   #proNInfo{
     height: 245px;
   }
@@ -174,11 +182,6 @@
   
   #remainingNumb{
     margin: 5px;
-  }
-
-  .detailFrame{
-    height: 880px;
-    margin: -5px 10px 0px 10px;
   }
 }
 
