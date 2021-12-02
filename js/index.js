@@ -2,7 +2,6 @@ import { comparisonHash, getQuestionNames, getQuestionProps } from './questionDa
 
 const colors=['black','white','#ff007f'];
 
-document.addEventListener('touchstart', function() {}, {passive: true});
 
 let questionName;
 $(document).ready(function() {
