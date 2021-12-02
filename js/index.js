@@ -13,29 +13,39 @@ $(document).ready(function() {
     $($('.circles li')[1]).css('background', colors[Math.floor(Math.random() * colors.length)])
   },14000);
   */
-
   const questionNames = getQuestionNames();
   if(sessionStorage.getItem('isFirst') != 'false') {
-    sessionStorage.setItem('isFirst', 'false');
-    for(let i = 0; i < questionNames.length; i++){
-      sessionStorage.setItem(questionNames[i], 'false');
+   sessionStorage.setItem('isFirst', 'false');
+   for(let i = 0; i < questionNames.length; i++){
+     sessionStorage.setItem(questionNames[i], 'false');
     }
   }
-
   let noCorrectedNumb = 0;
   for(let i = 0; i < questionNames.length; i++){
     if(sessionStorage.getItem(questionNames[i]) == 'false'){
       noCorrectedNumb++;
     }
   }
-  comparisonHash(localStorage.getItem('last'), 'CFNazo_A2gupC').then(result => {
-    if(!result){
+  var iframeWindow = document.querySelector('#iframe').contentWindow;
+  var origin = 'https://henohenon.github.io/canfes-fukuoka/';
+
+  window.addEventListener('message', function(event) {
+    // 送信元が指定のオリジンと一致していれば処理を行う
+    if(event.origin === origin) {
+      alert(event.data);
       noCorrectedNumb++;
+      $('.remainingNumb').each(function(index,element) {
+        $(element).text(noCorrectedNumb);
+      });  
+   
     }
-    $('.remainingNumb').each(function(index,element) {
-      element.text(noCorrectedNumb);
-    });
   });
+  iframeWindow.postMessage('get', origin);
+
+  $('.remainingNumb').each(function(element) {
+    $(element).text(noCorrectedNumb);
+  });
+
   
   $('.popupButton').on('click',function(){
     questionName=$(this).val();
@@ -68,8 +78,8 @@ $(document).ready(function() {
         $('#questionPopup').addClass('corrected');
         sessionStorage.setItem(questionName, answerInput);
         noCorrectedNumb--;
-        $('.remainingNumb').each(function(index,element) {
-          element.text(noCorrectedNumb);
+        $('.remainingNumb').each(function(element) {
+          $(element).text(noCorrectedNumb);
         });
       }else{
         $('#resultErea').text('残念...不正解です');
@@ -104,7 +114,8 @@ $(document).ready(function() {
     $('#hint2').removeClass('active');
     $('#answerInput').val('');
   });
-
+});
+  
   /* ハッシュ関数調べる用 */
   $('#makeHashButton').on('click', async function(){
     await makeHash($("#hashText").val()).then(hash=>{
@@ -112,7 +123,6 @@ $(document).ready(function() {
       console.log(hash);
     });
   });
-});
 
 $(function () {
   $(window).scroll(function () {
