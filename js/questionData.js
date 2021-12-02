@@ -10,7 +10,6 @@ const questions={
   'CFNazo_s2QZ62' :{'answeres':['82aaaa0e49d09afb502548b3cd50adf3799ca4ba62226de3bbb80c03978dde75'], 'hint1':'右上のイラストは、「くじら」です。', 'hint2':'左の図は、時刻を表しています。'},
   'CFNazo_tAU2FQ' :{'answeres':['6f37ffe3ec1d6fb722858dafc76a692e8d4617c520b04e32767615ce0694cb84'], 'hint1':'文字の色に法則性がありそうです。', 'hint2':'緑色の文字は、全て「い」になっています。'},
   'CFNazo_wsFEgB' :{'answeres':['4519ba204a8a88e7a39c266f47d2b39a0ba2f364101aa4e7bcc661f94cb1351b'], 'hint1':'', 'hint2':''},
-  'CFNazo_A2gupC' :{'answeres':['90bd955ed49d354f75a16447e1554c8904ff7f7008dad1b687be087ce94f821d'], 'hint1':'', 'hint2':''},
 }
 
 async function makeHash(text){
