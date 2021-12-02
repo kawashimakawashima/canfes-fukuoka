@@ -66,36 +66,47 @@ a:hover{
   display: inline-flex;
 }
 /* 文字とか震えるアニメーション */
+.effectAlpha{
+  opacity: 0;
+}
+.effectTop{
+  clip-path: polygon(
+    0% 60%,
+    100% 50%,
+    100% 0%,
+    0% 0%
+  );
+  position: absolute;
+  animation: topGlitch 5s steps(1) infinite;
+}
+.effectBottom{
+  clip-path: polygon(
+    0% 60%,
+    100% 50%,
+    100% 100%,
+    0% 100%
+  );
+  position: absolute;
+  animation: bottomGlitch 5s steps(1) infinite;
+
+}
 .popupButton {
-  cursor: pointer;
-  cursor: hand;
-  */
   cursor: pointer;
   display: inline-flex;
 }
 
-@keyframes hurueru {
-  0% {transform: translate(0px, 0px) rotateZ(0deg)}
-  25% {transform: translate(1px, 1px) rotateZ(1deg)}
-  50% {transform: translate(0px, -1px) rotateZ(0deg)}
-  75% {transform: translate(1px, 0px) rotateZ(-1deg)}
-  100% {transform: translate(0px, 0px) rotateZ(0deg)}
+@keyframes topGlitch {
+  0%{transform: translate(0px,0px);}
+  10%{transform: translate(-2px,-1px);}
+  15%{transform: translate(0px,0px);}
+  100%{transform: translate(0px,0px);}
 }
 
-/* 大見出し */
-
-.bigTitle{
-  z-index: 2;
-  text-align: center;
-  color: black;
-  position: relative;
-  font-size: 25px;
-}
-
-.underline{
-  border-bottom: 2px black solid;
-  width: 10%;
-  margin: auto;
+@keyframes bottomGlitch {
+  0%{transform: translate(0px,0px);}
+  60%{transform: translate(0px,3px);}
+  65%{transform: translate(0px,0px);}
+  100%{transform: translate(0px,0px);}
 }
 
 /* 雑にだけどスマホ対応〜 */
