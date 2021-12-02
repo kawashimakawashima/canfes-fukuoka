@@ -27,7 +27,7 @@ $(document).ready(function() {
     }
   }
   var iframeWindow = document.querySelector('#iframe').contentWindow;
-  var origin = 'https://henohenon.github.io/canfes-sekai/';
+  var origin = 'https://henohenon.github.io';
 
   window.addEventListener('message', function(event) {
     // 送信元が指定のオリジンと一致していれば処理を行う
