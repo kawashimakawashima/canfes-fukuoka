@@ -29,28 +29,11 @@ $(document).ready(function() {
       noCorrectedNumb++;
     }
   }
-  var iframeWindow = document.querySelector('#iframe').contentWindow;
-  var origin = 'https://henohenon.github.io';
-
   // 11問目用
   noCorrectedNumb++;
   
   $('.remainingNumb').each(function(index, element) {
     $(element).text(noCorrectedNumb);
-  });
-
-
-  iframeWindow.postMessage('get', origin);
-
-  window.addEventListener('message', function(event) {
-    // 送信元が指定のオリジンと一致していれば処理を行う
-    console.log(event);
-    if(event.origin === origin) {
-      noCorrectedNumb--;
-      $('.remainingNumb').each(function(index, element) {
-        $(element).text(noCorrectedNumb);
-      });
-    }
   });
 
   
@@ -143,6 +126,25 @@ $(function () {
       });
   });
 });
+
+window.onload = function(){
+  const iframeWindow = document.querySelector('#iframe').contentWindow;
+  const origin = 'https://henohenon.github.io';
+
+
+  iframeWindow.postMessage('get', origin);
+
+  window.addEventListener('message', function(event) {
+    // 送信元が指定のオリジンと一致していれば処理を行う
+    console.log(event);
+    if(event.origin === origin) {
+      noCorrectedNumb--;
+      $('.remainingNumb').each(function(index, element) {
+        $(element).text(noCorrectedNumb);
+      });
+    }
+  });
+}
 
 
 /* 以下ページ下の波用関数等。完全コピペですはい。 */
