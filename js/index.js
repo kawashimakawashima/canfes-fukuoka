@@ -8,6 +8,8 @@ const colors=['black','white','#ff007f'];
 
 
 let questionName;
+let noCorrectedNumb = 0;
+
 $(document).ready(function() {
   init();
   
@@ -23,7 +25,6 @@ $(document).ready(function() {
      sessionStorage.setItem(questionNames[i], 'false');
     }
   }
-  let noCorrectedNumb = 0;
   for(let i = 0; i < questionNames.length; i++){
     if(sessionStorage.getItem(questionNames[i]) == 'false'){
       noCorrectedNumb++;
@@ -136,7 +137,6 @@ window.onload = function(){
 
   window.addEventListener('message', function(event) {
     // 送信元が指定のオリジンと一致していれば処理を行う
-    console.log(event);
     if(event.origin === origin) {
       noCorrectedNumb--;
       $('.remainingNumb').each(function(index, element) {
