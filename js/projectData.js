@@ -59,15 +59,15 @@ function getSchedulesFromPraces(value) {
         return elemnt;
       }));
       
-      headeres = ["ステージ", "ブース", "常設展示"];
+      headeres = ["配信(ステージ)", "配信(ブース)", "常設展示"];
       break;
     case "stage":  
       schedules = stageSchedules.map(function(elemnt) {elemnt.column = 0; return elemnt;});
-      headeres = ["ステージ"];
+      headeres = ["配信(ステージ)"];
       break;
     case "booth":  
       schedules = boothSchedules.map(function(elemnt) {elemnt.column = 0; return elemnt;});
-      headeres = ["ブース"];
+      headeres = ["配信(ブース)"];
       break;
     case "constant":  
       schedules = constantSchedules.map(function(elemnt) {elemnt.column = 0; return elemnt;});
