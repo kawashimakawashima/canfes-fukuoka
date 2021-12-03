@@ -46,10 +46,10 @@ $(document).ready(function() {
     // 送信元が指定のオリジンと一致していれば処理を行う
     if(event.origin === origin) {
       noCorrectedNumb--;
+      console.log(event);
       $('.remainingNumb').each(function(index, element) {
         $(element).text(noCorrectedNumb);
-      });  
-   
+      });
     }
   });
 
