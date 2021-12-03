@@ -28,7 +28,7 @@ const constantSchedules = [
   {"startTime":0  , "duration":0.5, "id":21,
   "title":"一日中カラオケできるコーナー",  "url":"karaoke",  "iconUrl":"", "value":""},
   {"startTime":0.5, "duration":0.5, "id":22,
-  "title":"へのへのでキャンパスを埋め尽くしたい",  "url":"henoheno",  "iconUrl":"への島太郎", "value":"へのへのが"},
+  "title":"へのへのでキャンパスを埋め尽くしたい",  "url":"henoheno",  "iconUrl":"への島太郎", "value":"<h6>への<data class='popupButton' value='CFNazo_nBXLMF'><span class='sentence effectAlpha'>へ</span><span class='sentence effectTop'>へ</span><span class='sentence effectBottom'>へ</span></data><span>の</span></h6>"},
   {"startTime":1  , "duration":0.5, "id":23,
   "title":"馬が主催の射的大会",  "url":"horseShooting",  "iconUrl":"", "value":""},
   {"startTime":1.5, "duration":0.5, "id":24,
