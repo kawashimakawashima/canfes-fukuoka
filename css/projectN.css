@@ -1,0 +1,30 @@
+body{
+  text-align: center;
+}
+
+#proNInfo{
+  height: 420px;
+}
+#proNImage{
+  width: 100%;
+  max-width: 890px;
+}
+#proNInfo a{
+  position: static;
+}
+
+#infoForPC{
+  display: block;
+}
+#infoForPhone{
+  display: none;
+  font-size: 12px;
+}
+
+
+.bigLink{
+  z-index: 2;
+  position: relative;
+  font-size: 25px;
+  transform: translateY(-6px);
+}

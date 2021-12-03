@@ -98,24 +98,6 @@
   vertical-align: bottom;
 }
 
-#proNInfo{
-  height: 420px;
-}
-#proNImage{
-  width: 100%;
-  max-width: 890px;
-}
-#proNInfo a{
-  position: static;
-}
-#infoForPC{
-  display: block;
-}
-#infoForPhone{
-  display: none;
-  font-size: 12px;
-}
-
 #aboutNazotoki{
   text-align: center;
   margin-top: 50px;

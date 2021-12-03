@@ -13,8 +13,8 @@
 
   <!-- css -->
   <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/header.css">  
-  <link rel="stylesheet" href="../css/aboutCampas.css">  
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/projectN.css">
 
   <!-- js -->
   <script src="../js/header.js"></script>
@@ -43,10 +43,10 @@
         <li class="nav-item">
           <a class="nav-link" href="./schedule.html">スケジュール</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="./aboutCampas.html">キャンパス住所・注意事項</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="./projectN.html">プロNリンク</a>
         </li>
       </ul>
@@ -92,16 +92,18 @@
 
   <!-- 中身 -->
   <div class="outFrame"> 
-    <div class="bigTitle">キャンパス住所</div>
-    <div class="underline"></div>
-      
-    <div id="campasLocation">
-      <div id="location"><div class="popHideText"><h5>〒810-0004 福岡県福岡市中央区渡辺通2丁</h5><data class="popupButton" value="CFNazo_s2QZ62"><h5>目</h5></data><h5>4-8 7F</h5></div></div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.9042996134067!2d130.40059051524148!3d33.581833949819774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541919c8384f4e1%3A0x909ba34dfd68641b!2zTumrmOetieWtpuagoeODu1Ppq5jnrYnlrabmoKEg56aP5bKh44Kt44Oj44Oz44OR44K5!5e0!3m2!1sja!2sjp!4v1634819137975!5m2!1sja!2sjp" 
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <div class="bigTitle">キャンパス注意事項</div>
-    <div class="underline"></div>
+    <div id="proNLink" class="linkFrames">
+      <a class="bigLink" href="https://project-n.org/cms/">
+        プロジェクトN
+        <div class="underline"></div>
+      </a>
+      <div id="proNInfo" class="detailFrame">
+        <a href="https://project-n.org/cms/"><img  id="proNImage" src="../images/pron.png"></img></a> 
+        <h4 id="infoTitle">ログインについて</h4>
+        <h5 id="infoForPC">ID：生徒の皆さまは自分のメールアドレス、保護者の皆さまは「 User 」です。</br></br>PW：全員共通パスワードです。保護者の皆さまは「11/19に送信されたメール」を、</br>生徒の皆さまは「11/19に生徒用サイトへ掲載されたお知らせ」をご確認ください。</h5>
+        <h5 id="infoForPhone">ID：生徒の皆さまは自分のメールアドレス、</br>保護者の皆さまは「 User 」です。</br></br>PW：全員共通パスワードです。</br>保護者の皆さまは</br>「11/19に送信されたメール」、</br>生徒の皆さまは</br>「11/19に生徒用サイトへ掲載されたお知らせ」</br>をご確認ください。</h5>
+      </div>
+    </div> 
   </div>
 </body>
 </html>
