@@ -126,7 +126,7 @@ $(document).ready(function() {
       console.log(hash);
     });
   });
-
+/*
 $(function () {
   $(window).scroll(function () {
     const wHeight = $(window).height();
@@ -139,7 +139,7 @@ $(function () {
       });
   });
 });
-
+*/
 
 /* 以下ページ下の波用関数等。完全コピペですはい。 */
 
