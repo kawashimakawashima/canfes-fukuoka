@@ -1,3 +1,7 @@
+// スクロールフェードインで文句言われたので。何やってんのかは分かってない。
+//var supportsPassive=false;try{var opts=Object.defineProperty({},'passive',{get:function(){supportsPassive=true;}});window.addEventListener("testPassive", null, opts);window.removeEventListener("testPassive", null, opts);} catch (e) {}
+
+
 import { comparisonHash, getQuestionNames, getQuestionProps } from './questionData.js';
 
 const colors=['black','white','#ff007f'];
@@ -126,7 +130,7 @@ $(document).ready(function() {
       console.log(hash);
     });
   });
-
+/*
 $(function () {
   $(window).scroll(function () {
     const wHeight = $(window).height();
@@ -139,7 +143,7 @@ $(function () {
       });
   });
 });
-
+*/
 
 /* 以下ページ下の波用関数等。完全コピペですはい。 */
 
