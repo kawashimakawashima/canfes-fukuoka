@@ -19,7 +19,7 @@
     taskPlaceholderCssClass: 'skeduler-task-placeholder',
     cellCssClass: 'skeduler-cell',
 
-    lineHeight: 50,      // height of one half-hour line in grid
+    lineHeight: 75,      // height of one half-hour line in grid
     borderWidth: 1,      // width of board of grid cell
 
     debug: false
@@ -125,7 +125,7 @@
 
     tasks.forEach(function (task, index) {
       var innerContent = renderInnerCardContent(task);
-      var top = getCardTopPosition(task.startTime) + 2;
+      var top = getCardTopPosition(task.startTime);
       var height = getCardHeight(task.duration);
       var width = task.width || 194;
       var left = task.left || 4;
@@ -180,7 +180,7 @@
 
     var gridColumnElement = div.clone();
 
-    for (var i = 13; i < 18; i++) {
+    for (var i = 13; i < 17; i++) {
       // Populate timeline
       div.clone()
         .text(toTimeString(i))

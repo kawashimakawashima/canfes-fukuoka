@@ -11,21 +11,34 @@ const stageSchedules = [
   {"startTime":1.32 , "duration":0.25, "id":5,
   "title":"今日好き再現",  "url":"likeToday",  "iconUrl":"", "value":""},
   {"startTime":1.84 , "duration":0.16, "id":6,
-  "title":"バイオリン",  "url":"violin",  "iconUrl":"", "value":""},
+  "title":"バイオリンとギター演奏",  "url":"violinAndGuiter",  "iconUrl":"", "value":""},
   {"startTime":2.16 , "duration":0.16, "id":7,
-  "title":"太川さん企画",  "url":"violin",  "iconUrl":"", "value":""},
+  "title":"太川さん企画",  "url":"tagawa",  "iconUrl":"", "value":""},
   {"startTime":2.84 , "duration":0.5, "id":8,
   "title":"マジック",  "url":"magic",  "iconUrl":"", "value":""},
   {"startTime":3.5 , "duration":0.16, "id":9,
-  "title":"表彰",  "url":"magic",  "iconUrl":"", "value":""},
+  "title":"射的表彰",  "url":"shootingAwards",  "iconUrl":"", "value":""},
   {"startTime":3.84 , "duration":0.16, "id":8,
   "title":"エンディング",  "url":"ending",  "iconUrl":"", "value":""},
 ]
 const boothSchedules = [
+  
 ]
 const constantSchedules = [
-  {"startTime":0 , "duration":1 , "id":4,
-  "title":"こんなん",  "url":"demo-dayo",  "iconUrl":"への島太郎", "value":"へのへのが"},
+  {"startTime":0  , "duration":0.5, "id":21,
+  "title":"一日中カラオケできるコーナー",  "url":"karaoke",  "iconUrl":"", "value":""},
+  {"startTime":0.5, "duration":0.5, "id":22,
+  "title":"へのへのでキャンパスを埋め尽くしたい",  "url":"henoheno",  "iconUrl":"への島太郎", "value":"へのへのが"},
+  {"startTime":1  , "duration":0.5, "id":23,
+  "title":"馬が主催の射的大会",  "url":"horseShooting",  "iconUrl":"", "value":""},
+  {"startTime":1.5, "duration":0.5, "id":24,
+  "title":"絵の展示ブース",  "url":"picture",  "iconUrl":"", "value":""},
+  {"startTime":2  , "duration":0.5, "id":25,
+  "title":"VR体験会",  "url":"vr",  "iconUrl":"", "value":""},
+  {"startTime":2.5, "duration":0.5, "id":26,
+  "title":"剪紙製作・展示",  "url":"paperCutting",  "iconUrl":"", "value":""},
+  {"startTime":3  , "duration":0.5, "id":27,
+  "title":"バイオリン体験",  "url":"violin",  "iconUrl":"", "value":""},  
 ]
 
 function getSchedulesFromPraces(value) {
