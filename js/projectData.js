@@ -20,9 +20,24 @@ const stageSchedules = [
   "title":"射的表彰",  "url":"shootingAwards", "value":"", "isHasPage":""},
   {"startTime":3.84 , "duration":0.16, "id":8,
   "title":"エンディング",  "url":"ending", "value":"", "isHasPage":""},
+  {"startTime":3.84 , "duration":0.16, "id":8,
+  "title":"エンディング",  "url":"ending", "value":"", "isHasPage":""},
 ]
 const boothSchedules = [
-  
+  {"startTime":0.4  , "duration":0.08  , "id":11,
+  "title":"ねねさん",  "url":"karaoke", "value":"", "isHasPage":""},
+  {"startTime":0.84  , "duration":0.08, "id":12,
+  "title":"絵",  "url":"karaoke", "value":"", "isHasPage":""},
+  {"startTime":1.24  , "duration":0.08, "id":13,
+  "title":"へのへのもへじ",  "url":"karaoke", "value":"", "isHasPage":""},
+  {"startTime":1.24  , "duration":0.08, "id":13,
+  "title":"樋口さん",  "url":"karaoke", "value":"", "isHasPage":""},
+  {"startTime":1.44  , "duration":0.08, "id":14,
+  "title":"VR",  "url":"karaoke", "value":"", "isHasPage":""},
+  {"startTime":2.08  , "duration":0.08, "id":14,
+  "title":"射的",  "url":"karaoke", "value":"", "isHasPage":""},
+  {"startTime":2.32  , "duration":0.08, "id":14,
+  "title":"からおけ",  "url":"karaoke", "value":"", "isHasPage":""}
 ]
 const constantSchedules = [
   {"startTime":0  , "duration":0.5, "id":21,
