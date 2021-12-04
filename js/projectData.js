@@ -103,12 +103,13 @@ function getRandomProject(numb) {
   
   for(let i = 0; i < numb; i++){
     let projectNumb=Math.floor(Math.random() * projects.length);
-    let roopNumb=0;
-    while(projects[projectNumb].isHasPage==="having" || roopNumb < 20) {
+    for(let j = 0; j < 20; j++){
       projectNumb=Math.floor(Math.random() * projects.length);
-      roopNumb++;
+      if(projects[projectNumb].isHolding==="holding") {
+        result.push(projects.splice(projectNumb,1)[0]); 
+        break;
+      }
     }
-    result.push(projects.splice(projectNumb,1)[0]); 
   }
   return result;
 }
