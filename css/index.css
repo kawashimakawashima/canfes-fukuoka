@@ -95,12 +95,40 @@ a:hover{
   cursor: pointer;
   display: inline-flex;
 }
-
-
 .madeFrom{
-  float: right;
+  text-align: right;
 }
+#questionBack{
+  width: 100%;
+  height:100%;
+  position: absolute;
+}
+.questionCircle{
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.questionCircle li{
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #ff008000;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
 
+  list-style: none;
+  left: 70%;
+  animation-delay: 4s;
+}
+.questionCircle li .popupButton{
+  height: 20px;
+  width: 20px;
+  transform: translate(15px, 0px);
+}
 @keyframes topGlitch {
   0%{transform: translate(0px,0px);}
   10%{transform: translate(-2px,-1px);}
