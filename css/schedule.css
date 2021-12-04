@@ -18,6 +18,10 @@
 #linkArea{
   text-align: center;
 }
+#linkArea a{
+  color: skyblue;
+  text-decoration: underline;
+}
 #timeLine{
   position : absolute;
   border-bottom: solid 2px orange;
