@@ -3,7 +3,7 @@ const stageSchedules = [
   {"startTime":0 , "duration":0.16, "id":1,
   "title":"オープニング",  "url":"opening", "value":"", "isHasPage":""},
   {"startTime":0.25 , "duration":0.08, "id":2,
-  "title":"ピタゴラスイッチ",  "url":"pythagora", "value":"", "isHasPage":""},
+  "title":"ピタゴラスイッチ",  "url":"pythagora", "value":"", "isHasPage":"having"},
   {"startTime":0.5 , "duration":0.25, "id":3,
   "title":"職員バンド",  "url":"staffBand", "value":"", "isHasPage":""},
   {"startTime":0.92 , "duration":0.25, "id":4,
@@ -35,13 +35,13 @@ const boothSchedules = [
   {"startTime":1.92  , "duration":0.08, "id":14,
   "title":"VR",  "url":"karaoke", "value":"", "isHasPage":""},
   {"startTime":2.08  , "duration":0.08, "id":14,
-  "title":"射的",  "url":"karaoke", "value":"", "isHasPage":""},
+  "title":"射的",  "url":"horseShooting", "value":"", "isHasPage":"having"},
   {"startTime":2.32  , "duration":0.08, "id":14,
-  "title":"からおけ",  "url":"karaoke", "value":"", "isHasPage":""}
+  "title":"からおけ",  "url":"karaoke", "value":"", "isHasPage":"having"}
 ]
 const constantSchedules = [
   {"startTime":0  , "duration":0.5, "id":21,
-  "title":"一日中カラオケできるコーナー",  "url":"karaoke", "value":"", "isHasPage":""},
+  "title":"一日中カラオケできるコーナー",  "url":"karaoke", "value":"", "isHasPage":"having"},
   {"startTime":0.5, "duration":0.5, "id":22,
   "title":"へのへのでキャンパスを埋め尽くしたい",  "url":"henoheno",  "iconUrl":"への島太郎", "value":"<h6>への<data class='popupButton' value='CFNazo_mDhQae'><span class='sentence effectAlpha'>へ</span><span class='sentence effectTop'>へ</span><span class='sentence effectBottom'>へ</span></data><span>の</span></h6>"},
   {"startTime":1  , "duration":0.5, "id":23,
@@ -51,9 +51,9 @@ const constantSchedules = [
   {"startTime":2  , "duration":0.5, "id":25,
   "title":"VR体験会",  "url":"vr", "value":"", "isHasPage":""},
   {"startTime":2.5, "duration":0.5, "id":26,
-  "title":"剪紙製作・展示",  "url":"paperCutting", "value":"", "isHasPage":""},
+  "title":"剪紙製作・展示",  "url":"paperCutting", "value":"", "isHasPage":"having"},
   {"startTime":3  , "duration":0.5, "id":27,
-  "title":"バイオリン体験",  "url":"violin", "value":"", "isHasPage":""},  
+  "title":"バイオリン体験",  "url":"violin", "value":"", "isHasPage":"having"},  
 ]
 
 function getSchedulesFromPraces(value) {
@@ -108,6 +108,11 @@ function getRandomProject(numb) {
       if(projects[projectNumb].isHolding==="holding") {
         result.push(projects.splice(projectNumb,1)[0]); 
         break;
+      }else{
+        projects.splice(projectNumb,1)[0]
+      }
+      if(projects.length < 1){
+        return result;
       }
     }
   }
