@@ -104,7 +104,7 @@ a:hover{
   position: absolute;
 }
 .questionCircle{
-  z-index: 3;
+  z-index: -1;
   position: fixed;
   top: 0;
   left: 0;
@@ -119,7 +119,8 @@ a:hover{
   background: #ff008000;
   animation: animate 25s linear infinite;
   bottom: -150px;
-
+  z-index: 3;
+  
   list-style: none;
   left: 70%;
   animation-delay: 4s;
