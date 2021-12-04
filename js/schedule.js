@@ -57,7 +57,7 @@ function skeduleFromData(data){
   $("#skeduler-container").skeduler({
     headers: data[0],
     tasks: data[1],
-    cardTemplate: '<div class="projectTitle ${isHasPage}">${title}</div><div>${value}</div><a class="projectLink" href="./projects/${url}.html">詳しくみる</a>',
+    cardTemplate: '<div class="projectTitle">${title}</div><div>${value}</div><a class="projectLink ${isHasPage}" href="./projects/${url}.html">詳しくみる</a>',
     onClick: function (e, t) {
     //  window.location.href = "./projects/"+t["url"]+".html";  
     }
