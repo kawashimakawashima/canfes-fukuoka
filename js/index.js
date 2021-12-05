@@ -69,7 +69,6 @@ $(document).ready(function() {
         $('#questionPopup').addClass('corrected');
         localStorage.setItem(questionName, answerInput);
         noCorrectedNumb--;
-        $("#finish").addClass("active");
         $('.remainingNumb').each(function(element) {
           $(element).text(noCorrectedNumb);
         });

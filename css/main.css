@@ -168,11 +168,3 @@
     margin: 5px;
   }
 }
-
-
-#finish{
-  display: none;
-}
-#finish.active{
-  display: block;
-}
