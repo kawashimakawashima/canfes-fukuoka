@@ -98,18 +98,18 @@ function getRandomProject(numb) {
   let result=[];
   let projects=[];
   projects = $.merge(projects,stageSchedules);
-  projects = $.merge(projects,boothSchedules);
   projects = $.merge(projects,constantSchedules);
   
   for(let i = 0; i < numb; i++){
     let projectNumb=Math.floor(Math.random() * projects.length);
     for(let j = 0; j < 20; j++){
       projectNumb=Math.floor(Math.random() * projects.length);
-      if(projects[projectNumb].isHolding==="holding") {
+      if(projects[projectNumb].isHasPage==="having") {
         result.push(projects.splice(projectNumb,1)[0]); 
         break;
       }else{
-        projects.splice(projectNumb,1)[0]
+        projects.splice(projectNumb,1)[0];
+        console.log(projects)
       }
       if(projects.length < 1){
         return result;

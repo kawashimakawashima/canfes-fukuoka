@@ -1,4 +1,4 @@
-import {getRandomProject} from "./projectData.js";
+//import {getRandomProject} from "./projectData.js";
 
 $(document).ready(function() {
   
