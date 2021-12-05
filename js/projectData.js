@@ -20,8 +20,6 @@ const stageSchedules = [
   "title":"射的表彰",  "url":"shootingAwards", "value":"", "isHasPage":"having"},
   {"startTime":3.84 , "duration":0.16, "id":8,
   "title":"エンディング",  "url":"ending", "value":"", "isHasPage":""},
-  {"startTime":3.84 , "duration":0.16, "id":8,
-  "title":"エンディング",  "url":"ending", "value":"", "isHasPage":""},
 ]
 const boothSchedules = [
   {"startTime":0.4  , "duration":0.08  , "id":11,
