@@ -19,14 +19,14 @@ $(document).ready(function() {
   },14000);
   */
   const questionNames = getQuestionNames();
-  if(sessionStorage.getItem('isFirst') != 'false') {
-   sessionStorage.setItem('isFirst', 'false');
+  if(localStorage.getItem('isFirst') != 'false') {
+   localStorage.setItem('isFirst', 'false');
    for(let i = 0; i < questionNames.length; i++){
-     sessionStorage.setItem(questionNames[i], 'false');
+     localStorage.setItem(questionNames[i], 'false');
     }
   }
   for(let i = 0; i < questionNames.length; i++){
-    if(sessionStorage.getItem(questionNames[i]) == 'false'){
+    if(localStorage.getItem(questionNames[i]) == 'false'){
       noCorrectedNumb++;
     }
   }
@@ -51,7 +51,7 @@ $(document).ready(function() {
     $('#hint1Button').removeClass('active');
     $('#hint2Button').removeClass('active');
     
-    const answer=sessionStorage.getItem(questionName);
+    const answer=localStorage.getItem(questionName);
     if(answer == 'false'){
       $('#questionPopup').removeClass('corrected');  
       $('#resultErea').text('');
@@ -67,8 +67,9 @@ $(document).ready(function() {
       if(result){
         $('#resultErea').text('正解！答えは'+answerInput+'です！');
         $('#questionPopup').addClass('corrected');
-        sessionStorage.setItem(questionName, answerInput);
+        localStorage.setItem(questionName, answerInput);
         noCorrectedNumb--;
+        $("#finish").addClass("active");
         $('.remainingNumb').each(function(element) {
           $(element).text(noCorrectedNumb);
         });
@@ -139,6 +140,9 @@ window.onload = function(){
     // 送信元が指定のオリジンと一致していれば処理を行う
     if(event.origin === origin) {
       noCorrectedNumb--;
+
+      $("#finish").addClass("active");
+
       $('.remainingNumb').each(function(index, element) {
         $(element).text(noCorrectedNumb);
       });

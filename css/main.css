@@ -170,3 +170,9 @@
 }
 
 
+#finish{
+  display: none;
+}
+#finish.active{
+  display: block;
+}
