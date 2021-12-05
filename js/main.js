@@ -8,7 +8,7 @@ $(document).ready(function() {
       '<div class="randomProject"><a href="./projects/' + 
       randomProjects[i].url +'.html">'+ randomProjects[i].title +
       '</a><img src="../images/projects/icons/' +
-      randomProjects[i].iconUrl+'.png"></img></div>'
+      randomProjects[i].iconUrl+'"></img></div>'
       ));
     }
     /*
