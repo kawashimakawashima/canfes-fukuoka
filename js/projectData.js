@@ -41,17 +41,17 @@ const boothSchedules = [
 ]
 const constantSchedules = [
   {"startTime":0  , "duration":0.5, "id":21,
-  "title":"一日中カラオケできるコーナー",  "url":"karaoke", "value":"","iconUrl":"karaoke.png", "isHasPage":"having"},
+  "title":"一日中カラオケできるコーナー",  "url":"karaoke", "value":"だれでも飛び入り参加OK、採点ランキングなし、ただのんびり歌うだけのブースです。","iconUrl":"karaoke.png", "isHasPage":"having"},
   {"startTime":0.5, "duration":0.5, "id":22,
   "title":"へのへのでキャンパスを埋め尽くしたい",  "url":"henoheno",  "iconUrl":"への島太郎.png", "value":"<h6>への<data class='popupButton' value='CFNazo_mDhQae'><span class='sentence effectAlpha'>へ</span><span class='sentence effectTop'>へ</span><span class='sentence effectBottom'>へ</span></data><span>の</span></h6>", "isHasPage":""},
   {"startTime":1  , "duration":0.5, "id":23,
-  "title":"馬が主催の射的大会",  "url":"horseShooting", "value":"","iconUrl":"horseShooting.jpeg", "isHasPage":"having"},
+  "title":"馬が主催の射的大会",  "url":"horseShooting", "value":"みんな！射的をやろう！射的の大会もあるぞ！優勝者には豪華景品が！","iconUrl":"horseShooting.jpeg", "isHasPage":"having"},
   {"startTime":1.5, "duration":0.5, "id":24,
   "title":"絵の展示ブース",  "url":"picture", "value":"","iconUrl":"", "isHasPage":""},
   {"startTime":2  , "duration":0.5, "id":25,
   "title":"VR体験会",  "url":"vr", "value":"","iconUrl":"", "isHasPage":""},
   {"startTime":2.5, "duration":0.5, "id":26,
-  "title":"剪紙製作・展示",  "url":"paperCutting", "value":"","iconUrl":"paperCutting.jpg", "isHasPage":"having"},
+  "title":"剪紙製作・展示",  "url":"paperCutting", "value":"中国の伝統的な民族芸術「剪紙（せんし）」をキャンパスの皆さんと制作しました！","iconUrl":"paperCutting.jpg", "isHasPage":"having"},
   {"startTime":3  , "duration":0.5, "id":27,
   "title":"バイオリン体験",  "url":"violin", "value":"","iconUrl":"violin.jpg", "isHasPage":"having"},  
 ]
