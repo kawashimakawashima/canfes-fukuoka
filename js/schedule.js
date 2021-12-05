@@ -2,7 +2,7 @@ import {getSchedulesFromPraces, isHolding} from "./projectData.js";
 
 $(document).ready(function() {
   if(window.matchMedia("(max-width: 768px)").matches){
-    skeduleFromData(getSchedulesFromPraces("stage"));
+    skeduleFromData(getSchedulesFromPraces($("#headerSelect").val()));
   }else{ 
     skeduleFromData(getSchedulesFromPraces("all"));
   
