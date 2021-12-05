@@ -17,7 +17,7 @@ const stageSchedules = [
   {"startTime":2.84 , "duration":0.5, "id":8,
   "title":"マジック",  "url":"magic", "value":"","iconUrl":"magic.jpg", "isHasPage":"having"},
   {"startTime":3.5 , "duration":0.16, "id":9,
-  "title":"射的表彰",  "url":"shootingAwards", "value":"","iconUrl":"horseShooting.jpeg", "isHasPage":"having"},
+  "title":"射的表彰",  "url":"horseShooting", "value":"","iconUrl":"horseShooting.jpeg", "isHasPage":"having"},
   {"startTime":3.84 , "duration":0.16, "id":8,
   "title":"エンディング",  "url":"ending", "value":"","iconUrl":"", "isHasPage":""},
 ]
