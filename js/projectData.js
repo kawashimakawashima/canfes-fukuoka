@@ -15,7 +15,7 @@ const stageSchedules = [
   {"startTime":2.16 , "duration":0.16, "id":7,
   "title":"田川さん企画",  "url":"tagawa", "value":"", "isHasPage":""},
   {"startTime":2.84 , "duration":0.5, "id":8,
-  "title":"マジック",  "url":"magic", "value":"", "isHasPage":""},
+  "title":"マジック",  "url":"magic", "value":"", "isHasPage":"having"},
   {"startTime":3.5 , "duration":0.16, "id":9,
   "title":"射的表彰",  "url":"shootingAwards", "value":"", "isHasPage":"having"},
   {"startTime":3.84 , "duration":0.16, "id":8,
