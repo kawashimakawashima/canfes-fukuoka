@@ -11,6 +11,7 @@ $(document).ready(function() {
     $($(".scheduler-header")[2]).css({'margin-left':'20px'})
   
     $('#headerSelect').hide();
+    $('#sorry').hide();
   }
   
   $("#headerSelect").change(function(){
